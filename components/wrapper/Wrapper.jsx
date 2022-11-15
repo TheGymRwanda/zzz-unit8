@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 export default function Wrapper({ styles, children }) {
   return (
-    <section className={`md:max-w-6.5xl  max-w-19 mx-auto ${styles}`}>
+    <section className={`px-5 lg:px-16 md:px-9 mx-auto xl:max-w-8xl ${styles}`}>
       {children}
     </section>
   );
