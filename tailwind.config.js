@@ -21,6 +21,9 @@ module.exports = {
                     50: "#F4F4F4",
                 },
             },
+            maxWidth: {
+                "8xl": "82rem",
+            },
         },
     },
     plugins: [],
