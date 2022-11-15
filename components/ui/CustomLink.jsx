@@ -14,4 +14,5 @@ export default function CustomLink({ link , text , style }) {
             </div>
         </Link >
     )
+    
 }
