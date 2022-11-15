@@ -10,6 +10,10 @@ module.exports = {
             fontFamily: {
                 grotesk: ["Grotesk", "sans-serif"],
             },
+            colors: {
+                primary: "#5602E0",
+                muted: "#9A9A9A",
+            },
         },
     },
     plugins: [],
