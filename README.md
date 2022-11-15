@@ -1,6 +1,6 @@
 # Unit8 project
 
-# Welcome to unit8  landing page project 👋
+# Welcome to unit8 landing page project 👋
 
 ## Getting Started
 
@@ -11,7 +11,6 @@ First, run the development server:
     npm run dev
 ```
 
-
 You can run this for lint validation
 
 ```bash
@@ -19,7 +18,6 @@ You can run this for lint validation
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
@@ -33,5 +31,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-
