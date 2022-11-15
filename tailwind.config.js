@@ -11,8 +11,12 @@ module.exports = {
                 grotesk: ["Grotesk", "sans-serif"],
             },
             colors: {
-                primary: "#5602E0",
-                muted: "#9A9A9A",
+                'primary':{
+                  '300': "#5602E0",
+                },
+                'muted':{
+                  '300': '#9A9A9A'
+                }
             },
         },
     },
