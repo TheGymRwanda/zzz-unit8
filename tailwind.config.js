@@ -10,9 +10,6 @@ module.exports = {
       fontFamily: {
         grotesk: ["Grotesk", "sans-serif"],
       },
-      maxWidth: {
-        "8xl": "82rem",
-      },
       colors: {
         primary: {
           300: "#5602E0",
@@ -27,12 +24,34 @@ module.exports = {
       maxWidth: {
         "8xl": "82rem",
       },
+      gap: {
+        5.5: "1.125rem",
+      },
+      fontSize: {
+        "2.5xl": "1.25rem",
+      },
+      spacing: {
+        6.6: "1.6875rem",
+      },
+      spacing:{
+        "6.6": "1.6875rem",
+        "4%": "4%"
+      },
+      inset: {
+        "0.6": "0.625rem",
+        "0.3": "0.375rem",
+        "0.2": "0.125rem"
+      },
+      maxWidth: {
+        '6.5xl': '78rem',
+        19: '19.375rem',
+      },
       width: {
         "70w": "70vw",
       },
       letterSpacing: {
         0.01: "0.01rem",
-      },
+      }
     },
   },
   plugins: [],
