@@ -8,7 +8,7 @@ export default function Expertise() {
           {expertiseList.map((expertise, index) => (
             <h5
               key={index}
-              className="border-b border-muted-100 w-70w md:w-[18.125rem]"
+              className="border-b border-muted-100 w-70w ssm:w-[18.125rem]"
             >
               {expertise}
             </h5>

@@ -52,6 +52,9 @@ module.exports = {
       letterSpacing: {
         0.01: "0.01rem",
       },
+      screens: {
+        ssm: "400px",
+      },
     },
   },
   plugins: [],
