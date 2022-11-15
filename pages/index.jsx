@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Expertise from '../components/Sections/Expertise';
+import Head from "next/head";
+import Expertise from "../components/Sections/Expertise";
 
 export default function Home() {
   return (
