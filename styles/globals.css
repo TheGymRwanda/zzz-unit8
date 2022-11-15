@@ -4,14 +4,14 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Grotesk";
-    src: url("https://res.cloudinary.com/dl1vj7yr9/raw/upload/v1668506662/Fonts/NeufileGrotesk-RegularExtended.1238bf0_xsluyd.woff2");
-    font-display: swap;
-    font-weight: 400;
+  font-family: "Grotesk";
+  src: url("https://res.cloudinary.com/dl1vj7yr9/raw/upload/v1668506662/Fonts/NeufileGrotesk-RegularExtended.1238bf0_xsluyd.woff2");
+  font-display: swap;
+  font-weight: 400;
 }
 
-@layer components{
-    body{
-        @apply font-grotesk
-    }
+@layer components {
+  body {
+    @apply font-grotesk;
+  }
 }
