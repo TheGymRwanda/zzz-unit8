@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "5.5xl": "3.625rem",
+      },
+      lineHeight: {
+        12: "4.5rem",
+      },
       fontFamily: {
         grotesk: ["Grotesk", "sans-serif"],
       },
@@ -20,6 +26,9 @@ module.exports = {
       },
       maxWidth: {
         "8xl": "82rem",
+      },
+      margin: {
+        12: "5.375rem",
       },
     },
   },
