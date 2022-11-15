@@ -21,9 +21,6 @@ module.exports = {
           50: "#F4F4F4",
         },
       },
-      maxWidth: {
-        "8xl": "82rem",
-      },
       gap: {
         5.5: "1.125rem",
       },
@@ -44,7 +41,8 @@ module.exports = {
       },
       maxWidth: {
         '6.5xl': '78rem',
-        19: '19.375rem',
+        "19": '19.375rem',
+        "8xl": "82rem",
       },
       width: {
         "70w": "70vw",

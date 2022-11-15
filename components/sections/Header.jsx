@@ -4,10 +4,10 @@ export default function Header() {
     return (
         <section className="mt-6.6">
             <div className="flex gap-5.5 flex-col text-2.5xl font-normal leading-7 ">
-                <p>
+                <span>
                     Ape Unit
-                </p>
-                <p>
+                </span>
+                <span>
                     Unit➇ is a pioneering technology and marketing 
                     services company that creates end-to-end digital
                     experiences for brands such as 
@@ -17,8 +17,8 @@ export default function Header() {
                     and more. Its team
                     of 2,500+ digital specialists across 30+ locations
                     on 5 continents delivers pioneering work on a global
-                    scale with a boutique culture. <span> <CustomLink text="Contact us"  /> </span>
-                </p>
+                    scale with a boutique culture.  <CustomLink text="Contact us"  /> 
+                </span>
             </div>
         </section>    
     )
