@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Expertise from "../components/Sections/Expertise";
 import Header from "../components/sections/Header";
+import Project from "../components/sections/Project";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <title>Unit 8</title>
       </Head>
       <Header />
+      <Project />
       <Expertise />
     </>
   );
