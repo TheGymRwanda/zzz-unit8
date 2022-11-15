@@ -1,44 +1,44 @@
-const projectData = [
+export const projectData = [
   {
     id: 1,
     title: "Dacade",
-    image: "/",
+    image: "/assets/imgs/dacade.webp",
     subtitle: "P2P learning platform ",
   },
   {
     id: 2,
     title: "Bitlipa",
-    image: "/",
+    image: "/assets/imgs/bitlipa.webp",
     subtitle: "P2P learning platform ",
   },
   {
     id: 3,
     title: "Symplify",
-    image: "/",
+    image: "/assets/imgs/default.png",
     subtitle: "P2P learning platform ",
   },
   {
     id: 4,
     title: "UTU.io",
-    image: "/",
+    image: "/assets/imgs/default.png",
     subtitle: "P2P learning platform ",
   },
   {
     id: 5,
-    title: "UTU.NeueUX",
-    image: "/",
+    title: "NeueUX",
+    image: "/assets/imgs/neueux.webp",
     subtitle: "P2P learning platform ",
   },
   {
     id: 6,
     title: "Lab3",
-    image: "/",
+    image: "/assets/imgs/lab3.png",
     subtitle: "P2P learning platform ",
   },
   {
     id: 7,
     title: "Even",
-    image: "/",
+    image: "/assets/imgs/even.webp",
     subtitle: "P2P learning platform ",
   },
 ];
