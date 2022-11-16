@@ -63,10 +63,12 @@ module.exports = {
         19: "19.375rem",
         48:"18.875rem",
         "6.5xl": "78rem",
-        "":""
+        "94":"29.8125rem",
       },
       minHeight: {
-       "96":"47.31rem"
+        "86":"23.0625rem",
+        "94":"29.8125rem",
+        "96":"47.31rem",
       },
       width: {
         "70w": "70vw",
@@ -95,8 +97,9 @@ module.exports = {
       borderRadius: {
         "2.3xl":"1.1875rem",
       },
-
-
+      borderWidth: {
+        1.5:"0.0938rem"
+      }
     },
   },
   plugins: [],
