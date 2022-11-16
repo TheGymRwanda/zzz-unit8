@@ -56,13 +56,17 @@ module.exports = {
         48:"18.875rem",
         "6.5xl": "78rem",
         "8xl": "82rem",
-        "41":"10.5rem"
+        "41":"10.5rem",        
+        "8xl": "82rem",
       },
       minWidth: {
         19: "19.375rem",
         48:"18.875rem",
         "6.5xl": "78rem",
-        "8xl": "82rem",
+        "":""
+      },
+      minHeight: {
+       "96":"47.31rem"
       },
       width: {
         "70w": "70vw",
@@ -83,14 +87,16 @@ module.exports = {
       },
       padding: {
         "2.5":"0.625rem",
-        "0.1":"0.1875rem"
+        "0.1":"0.1875rem",
       },
       dropShadow: {
-        "custom-sm":"1px 2px 5px rgba(0, 0, 0, 0.25)"
+        "custom-sm":"1px 2px 5px rgba(0, 0, 0, 0.25)",
       },
       borderRadius: {
-        "2.3xl":"1.1875rem"
-      }
+        "2.3xl":"1.1875rem",
+      },
+
+
     },
   },
   plugins: [],
