@@ -2,12 +2,12 @@ import CustomLink from "../ui/CustomLink";
 
 export default function Header() {
     return (
-        <section className="mt-6.6">
-            <div className="flex gap-5.5 flex-col text-2.5xl font-normal leading-7 ">
-                <span>
+        <section className="my-6.6  w-full">
+            <div className="flex gap-5.5 flex-col min-w-full text-2.5xl font-normal leading-7 lg:flex-row lg:w-[806px] lg:justify-between ">
+                <h1 className="flex-grow">
                     Ape Unit
-                </span>
-                <span>
+                </h1>
+                <span className="lg:w-50">
                     Unit➇ is a pioneering technology and marketing 
                     services company that creates end-to-end digital
                     experiences for brands such as 
