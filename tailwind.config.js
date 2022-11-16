@@ -35,6 +35,8 @@ module.exports = {
         6.6: "1.6875rem",
         "4%": "4%",
         12: "5.375rem",
+        23: "6.5625rem",
+        13: "3.25rem",
       },
       inset: {
         0.6: "0.625rem",
@@ -56,7 +58,7 @@ module.exports = {
         0.01: "0.01rem",
       },
       screens: {
-        ssm: "400px",
+        ssm: "25rem",
       },
       margin: {
         11.2: "4.8125rem",
