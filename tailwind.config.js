@@ -33,7 +33,7 @@ module.exports = {
         xs:"0.0099rem",
         xsm:"0.0124rem",
         0.01: "0.01rem",
-        'hug': '-0.015rem'
+        'hug': '-0.015rem',
       },
       gap: {
         5.5: "1.125rem",
@@ -49,6 +49,7 @@ module.exports = {
         12: "5.375rem",
         23: "6.5625rem",
         13: "3.25rem",
+        11.1: "3rem",
       },
       inset: {
         0.6: "0.625rem",
@@ -86,6 +87,7 @@ module.exports = {
       },
       margin: {
         11.2: "4.8125rem",
+        11.1: "3rem",
         33: "8.25rem",
       },
       padding: {

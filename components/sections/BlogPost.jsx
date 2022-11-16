@@ -5,6 +5,7 @@ import Wrapper from "../wrapper/Wrapper"
 import blogData from "/utils/blogData"
 import RightArrow from "../vectors/Arrow"
 
+
 export default function BlogPost() {
     const [blogs , setBlogs] = useState([]);
     const [blogLength , setBlogLength] =  useState(0);

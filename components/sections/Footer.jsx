@@ -3,7 +3,7 @@ import CustomLink from "../ui/CustomLink";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col text-xl gap-[3rem] -tracking-0.01 md:text-2xl md:flex-row md:justify-between mb-[3rem]">
+    <footer className="flex flex-col text-xl gap-11.1 -tracking-0.01 md:text-2xl md:flex-row md:justify-between mb-11.1">
       <address className="not-italic">
         Ape Unit GmbH <br /> Waldemarstraße 38, <br /> 10999 Berlin
       </address>
