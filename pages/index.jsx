@@ -1,6 +1,6 @@
 import Head from "next/head";
 import AboutUs from "../components/sections/AboutUs";
-import Expertise from "../components/Sections/Expertise";
+import Expertise from "../components/sections/Expertise";
 import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
 import Project from "../components/sections/Project";
