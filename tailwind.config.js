@@ -48,9 +48,13 @@ module.exports = {
       },
       width: {
         "70w": "70vw",
+        73: "18.125rem",
       },
       letterSpacing: {
         0.01: "0.01rem",
+      },
+      screens: {
+        ssm: "400px",
       },
     },
   },
