@@ -57,6 +57,10 @@ module.exports = {
       screens: {
         ssm: "400px",
       },
+      margin: {
+        11.2: "4.8125rem",
+        33: "8.25rem",
+      },
     },
   },
   plugins: [],
