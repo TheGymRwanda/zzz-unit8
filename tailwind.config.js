@@ -52,12 +52,17 @@ module.exports = {
         "70w": "70vw",
         73: "18.125rem",
         50: "50.375rem",
+        74: "19.375rem",
       },
       letterSpacing: {
         0.01: "0.01rem",
       },
       screens: {
         ssm: "25rem",
+      },
+      margin: {
+        11.2: "4.8125rem",
+        33: "8.25rem",
       },
     },
   },
