@@ -35,6 +35,8 @@ module.exports = {
         6.6: "1.6875rem",
         "4%": "4%",
         12: "5.375rem",
+        23: "6.5625rem",
+        13: "3.25rem",
       },
       inset: {
         0.6: "0.625rem",
@@ -49,13 +51,13 @@ module.exports = {
       width: {
         "70w": "70vw",
         73: "18.125rem",
-        50:"50.375rem"
+        50: "50.375rem",
       },
       letterSpacing: {
         0.01: "0.01rem",
       },
       screens: {
-        ssm: "400px",
+        ssm: "25rem",
       },
     },
   },
