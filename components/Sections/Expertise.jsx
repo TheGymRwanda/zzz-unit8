@@ -9,7 +9,7 @@ export default function Expertise() {
             // used width of 70vw (w-70w) to intentionaly flow the text to 70% of the whole screen (wrapper margin included) but only on mobile screens below 400px of width
             <h5
               key={index}
-              className="border-b border-muted-100 w-70w ssm:w-73"
+              className="border-b border-muted-100 w-70w ssm:w-73 lg:w-74"
             >
               {expertise}
             </h5>

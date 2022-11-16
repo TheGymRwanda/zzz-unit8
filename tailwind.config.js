@@ -49,7 +49,8 @@ module.exports = {
       width: {
         "70w": "70vw",
         73: "18.125rem",
-        50:"50.375rem"
+        50: "50.375rem",
+        74: "19.375rem",
       },
       letterSpacing: {
         0.01: "0.01rem",
