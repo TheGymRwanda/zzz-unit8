@@ -56,6 +56,7 @@ module.exports = {
       },
       letterSpacing: {
         0.01: "0.01rem",
+        'hug': '-0.015rem'
       },
       screens: {
         ssm: "25rem",
