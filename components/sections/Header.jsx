@@ -3,7 +3,7 @@ import CustomLink from "../ui/CustomLink";
 export default function Header() {
     return (
         <section className="my-6.6  w-full">
-            <div className="flex gap-5.5 flex-col min-w-full text-2.5xl font-normal leading-7 lg:flex-row lg:w-[806px] lg:justify-between lg:text-2xl">
+            <div className="flex gap-5.5 flex-col min-w-full text-2.5xl font-normal leading-7 lg:flex-row lg:justify-between lg:text-2xl">
                 <h1 className="flex-grow">
                     Ape Unit
                 </h1>
