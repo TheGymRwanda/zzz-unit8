@@ -1,4 +1,4 @@
-import expertiseList from "../../utils/expertiseData";
+import expertiseList from "/utils/expertiseData";
 export default function Expertise() {
   return (
     <section className="float-right mb-11.2 md:mb-33 lg:mb-24">
