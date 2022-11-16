@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         grotesk: ["Grotesk", "sans-serif"],
       },
+      textUnderlineOffset: {
+        3: "1px",
+      },
       colors: {
         primary: {
           300: "#5602E0",
