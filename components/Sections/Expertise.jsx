@@ -1,7 +1,7 @@
 import expertiseList from "../../utils/expertiseData";
 export default function Expertise() {
   return (
-    <section className="float-right">
+    <section className="float-right mb-[4.8125rem] md:mb-[8.25rem] lg:mb-24">
       <div className="text-xl leading-8 -tracking-0.01 md:text-2xl">
         <h4 className=" text-muted-300">Expertise</h4>
         <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-y-3 gap-x-6">
