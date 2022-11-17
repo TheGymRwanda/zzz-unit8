@@ -1,8 +1,10 @@
 import Head from "next/head";
 import AboutUs from "../components/sections/AboutUs";
+import BlogPost from "../components/Sections/BlogPost";
 import Expertise from "../components/Sections/Expertise";
 import Header from "../components/sections/Header";
 import Project from "../components/sections/Project";
+import Wrapper from "../components/wrapper/Wrapper";
 
 export default function Home() {
   return (
@@ -10,10 +12,13 @@ export default function Home() {
       <Head>
         <title>Unit 8</title>
       </Head>
-      <Header />
-      <Project />
-      <Expertise />
-      <AboutUs/>
+      <Wrapper>
+        <Header />
+        <Project />
+        <Expertise />
+        <AboutUs/>
+      </Wrapper>
+      <BlogPost />
     </>
   );
 }

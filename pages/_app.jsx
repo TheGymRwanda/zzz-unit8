@@ -3,10 +3,12 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Wrapper>
-      <Component {...pageProps} />
-    </Wrapper>
+
+     <Component {...pageProps} />
+ 
   );
 }
 
 export default MyApp;
+
+

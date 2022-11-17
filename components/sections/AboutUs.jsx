@@ -11,8 +11,8 @@ export default function AboutUs() {
     }
 
     return (
-        <>
-            <div className="grid w-full gap-6 mb-6.6 text-xl md:hidden">
+        <div className="">
+            <div className="grid w-full gap-6 mb-6.6 text-xl md:hidden ">
                 {data.map((el, index) => {
                     let { title, paragraphs } = el;
                     return (
@@ -65,50 +65,51 @@ export default function AboutUs() {
                     );
                 })}
             </div>
-            <div className="md:grid gap-6 mb-6.6 hidden w-full text-2xl xl:w-50 xl:float-right">
-                <div className="flex gap-6 text-muted-300 -tracking-hug">
-                    {data.map((el, index) => {
-                        return (
-                            // <>{index}</>
-                            <div
-                                className={` transition duration-500 pb-1 cursor-pointer ${
-                                    selectedDiv == index
-                                        ? "border-b-1.5 border-b-primary-300 text-primary-300 "
-                                        : " "
-                                }`}
-                                key={index}
-                                onClick={() => setSelectedDiv(index)}
-                            >
-                                {el.title}
-                            </div>
-                        );
-                    })}
-                </div>
-                <div className="grid -tracking-0.01 gap-6 relative">
-                    {data.map((el, index) => {
-                        return (
-                            <div
-                                key={index}
-                                className={`absolute grid gap-4 transition duration-500 ${
-                                    selectedDiv === index
-                                        ? "text-black/100 relative"
-                                        : "text-black/0 select-none"
-                                }`}
-                            >
-                                <div>
-                                    {el.paragraphs[0]}{" "}
-                                    <CustomLink
-                                        link={el.link}
-                                        text="Learn more"
-                                        style="text-2xl"
-                                    />
+            <div className="flex w-full justify-end md:min-h-96 flex-grow-0">
+                <div className="md:flex md:flex-col gap-6 mb-6.6 hidden w-full text-2xl xl:w-50">
+                    <div className="flex h-8 gap-6 text-muted-300 -tracking-hug">
+                        {data.map((el, index) => {
+                            return (
+                                <div
+                                    className={` transition duration-500 pb-1 cursor-pointer ${
+                                        selectedDiv == index
+                                            ? "border-b-1.5 border-b-primary-300 text-primary-300 "
+                                            : " "
+                                    }`}
+                                    key={index}
+                                    onClick={() => setSelectedDiv(index)}
+                                >
+                                    {el.title}
                                 </div>
-                                <div>{el.paragraphs[1] || " "}</div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
+                    <div className="grid -tracking-0.01 gap-6 relative">
+                        {data.map((el, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className={`absolute grid gap-4 transition duration-500 ${
+                                        selectedDiv === index
+                                            ? "text-black/100 relative"
+                                            : "text-black/0 select-none"
+                                    }`}
+                                >
+                                    <div>
+                                        {el.paragraphs[0]}{" "}
+                                        <CustomLink
+                                            link={el.link}
+                                            text="Learn more"
+                                            style="text-2xl"
+                                        />
+                                    </div>
+                                    <div>{el.paragraphs[1] || " "}</div>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
