@@ -22,6 +22,7 @@
   overflow-y: scroll;
   scrollbar-width: none; 
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 .hide-scroll::-webkit-scrollbar { 
   width: 0;

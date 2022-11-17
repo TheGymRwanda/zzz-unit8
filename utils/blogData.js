@@ -30,9 +30,18 @@ const blogData = [
         `,
         tags:["Blockchain","DAOs","Decentralization"]
     },
-    ,
     {
         id: 4,
+        date: "02 Oct 2022",
+        title: "What is Ethereum, and Why is it Special?",
+        description: `
+            Ethereum (and web3 more generally) was designed to 
+            be a new, better version of the internet.        
+        `,
+        tags:["Blockchain","DAOs","Decentralization"]
+    },
+    {
+        id: 6,
         date: "02 Oct 2022",
         title: "What is Ethereum, and Why is it Special?",
         description: `

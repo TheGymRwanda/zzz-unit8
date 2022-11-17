@@ -1,4 +1,3 @@
-import React from "react"
 function Blog({date, title,description ,children}) {
     return(
         <div className=" flex-grow-0 min-w-48 md:min-w-94  md:max-w-94 min-h-83 md:p-5 p-4 lg:p-5 drop-shadow-custom-sm- border border-muted-400 rounded-xl flex flex-col">

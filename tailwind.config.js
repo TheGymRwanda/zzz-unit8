@@ -30,6 +30,7 @@ module.exports = {
         xs:"0.0099rem",
         xsm:"0.0124rem",
         0.01: "0.01rem",
+        'hug': '-0.015rem'
       },
       gap: {
         5.5: "1.125rem",
@@ -75,10 +76,6 @@ module.exports = {
         73: "18.125rem",
         50: "50.375rem",
         74: "19.375rem",
-      },
-      letterSpacing: {
-        0.01: "0.01rem",
-        'hug': '-0.015rem'
       },
       screens: {
         ssm: "25rem",
