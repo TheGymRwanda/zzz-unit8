@@ -6,7 +6,7 @@ import image1 from "/public/assets/imgs/team_of_4.webp";
 export default function GallerySimulation() {
   return (
     <section>
-      <div className="relative min-h-screen">
+      <div className="relative hidden min-h-screen xl:block">
         <Image src={image1} className="absolute w-74 top-20" />
         <Image src={image2} className="absolute top-0 w-74 left-24 z-[2]" />
         <Image src={image3} className="absolute w-74 top-64 left-60 z-[3]" />
@@ -16,6 +16,7 @@ export default function GallerySimulation() {
         />
         <Image src={image2} className="absolute top-0 w-74 left-24 z-[2]" />
       </div>
+      <div></div>
     </section>
   );
 }
