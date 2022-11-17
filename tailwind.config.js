@@ -33,7 +33,7 @@ module.exports = {
         xs:"0.0099rem",
         xsm:"0.0124rem",
         0.01: "0.01rem",
-        'hug': '-0.015rem'
+        'hug': '-0.015rem',
       },
       gap: {
         5.5: "1.125rem",
@@ -49,15 +49,18 @@ module.exports = {
         12: "5.375rem",
         23: "6.5625rem",
         13: "3.25rem",
+        11.1: "3rem",
       },
       inset: {
         0.6: "0.625rem",
         0.3: "0.375rem",
         0.2: "0.125rem",
+        "layout": "calc(calc(100% - 82rem) / 2)"
       },
       maxWidth: {
         19: "19.375rem",
         48:"18.875rem",
+        "94":"29.8125rem",
         "6.5xl": "78rem",
         "8xl": "82rem",
         "41":"10.5rem",        
@@ -86,6 +89,7 @@ module.exports = {
       },
       margin: {
         11.2: "4.8125rem",
+        11.1: "3rem",
         33: "8.25rem",
       },
       padding: {

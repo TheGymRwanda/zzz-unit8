@@ -12,7 +12,7 @@
 
 @layer components {
   body {
-    @apply font-grotesk;
+    @apply font-grotesk overflow-x-hidden;
   }
 }
 

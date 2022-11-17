@@ -5,6 +5,7 @@ import Wrapper from "../wrapper/Wrapper"
 import blogData from "/utils/blogData"
 import RightArrow from "../vectors/Arrow"
 
+
 export default function BlogPost() {
     const [blogs , setBlogs] = useState([]);
     const [blogLength , setBlogLength] =  useState(0);
@@ -38,17 +39,16 @@ export default function BlogPost() {
 
     const scrollBlogForward = () => {
         fetchBlogs();
-        mainWrapperRef.current.scroll(scrollPosition+300,0)
+        mainWrapperRef.current.scroll(scrollPosition+1000,0)
     }
 
 
     
     const scrollBlogBack = () => {
-        console.log(scrollPosition-300)
-        if(scrollPosition-300 == 0) {
+        if(scrollPosition-1000 == 0) {
             setScrolled(false)
         }
-        mainWrapperRef.current.scroll(scrollPosition-300 <= 0 ? 0 : scrollPosition-300 , 0)
+        mainWrapperRef.current.scroll(scrollPosition-1000 <= 0 ? 0 : scrollPosition-1000 , 0)
     }
 
 
@@ -84,7 +84,7 @@ export default function BlogPost() {
                     </div>
                 </div>
             </Wrapper>
-            <div ref={mainWrapperRef} className="px-5 mx-auto lg:px-16 md:px-9 flex max-w-full overflow-x-auto gap-6 p-6 hide-scroll">
+            <div ref={mainWrapperRef} className="px-5 mx-auto  2xl:left-layout  relative lg:px-16 md:px-9 flex max-w-full overflow-x-auto gap-6 p-6 hide-scroll">
                 {
                     blogs.map((value, index) => {
                         let {date , title , description, tags} = value;
