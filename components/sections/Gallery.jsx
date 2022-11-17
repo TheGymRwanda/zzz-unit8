@@ -7,8 +7,8 @@ export default function Gallery() {
     window.addEventListener("DOMContentLoaded", movingImg());
   }, []);
   return (
-    <div className="relative">
-      <div id="randsImages" className="border-2 ">
+    <div className="relative h-screen">
+      <div id="randsImages" className="">
         {galery.map((im) => {
           return (
             <img src={im.picture} key={im.id} alt="users" className="img" />
