@@ -23,7 +23,7 @@ function movingImg() {
 
   window.onresize = resizeWidthAndHeight();
 
-  randoms.style.display;
+  randoms.style.display = "";
   TweenMax.set(randoms, { alpha: 0 });
   TweenMax.to(randoms, 0.7, {
     alpha: 1,
@@ -88,13 +88,15 @@ function movingImg() {
     if (window.DeviceMotionEvent) {
       window.removeEventListener("devicemotion", window.processMotion, false);
     }
-    let dist = getDistance(oldMouseX, e.pageX, oldMouseY, e.pageY);
+
+    let dist = getDistance(oldMouseX, e.clientX, oldMouseY, e.clientY);
     if (dist > 20) {
-      oldMouseX = e.pageX;
-      oldMouseY = e.pageY;
+      oldMouseX = e.clientX;
+      oldMouseY = e.clientY;
       if (++randIndex > randImages.length - 1) randIndex = 0;
 
       let img = randImages[randIndex];
+
       if (img.width && img.height) {
         if (ww > 600) {
           if (devicePixelRatio) {
@@ -124,6 +126,7 @@ function movingImg() {
               img.width / 2,
               img.height / 2
             );
+            document.querySelector(".dummy").style.display = "none";
           } else {
             contex.drawImage(
               img,
