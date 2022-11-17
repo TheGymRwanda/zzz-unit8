@@ -64,6 +64,7 @@ module.exports = {
         19: "19.375rem",
         48:"18.875rem",
         "6.5xl": "78rem",
+        "90":"23.0625rem",
         "94":"29.8125rem",
       },
       minHeight: {
@@ -88,7 +89,7 @@ module.exports = {
         "2.5":"0.625rem",
         "0.1":"0.1875rem",
       },
-      dropShadow: {
+      boxShadow: {
         "custom-sm":"1px 2px 5px rgba(0, 0, 0, 0.25)",
       },
       borderRadius: {
