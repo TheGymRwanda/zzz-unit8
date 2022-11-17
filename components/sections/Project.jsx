@@ -5,7 +5,11 @@ import { projectData } from "../../utils/projectData";
 export default function Project() {
   const [shown, setShown] = useState(0);
   const shownImageOnclik = (e) => {
+    if (shown == e.target.id) return setShown(0);
     setShown(e.target.id);
+  };
+  const hideImage = (e) => {
+    setShown(0);
   };
   return (
     <div className="flex flex-col lg:relative mb-13 md:mb-23">
@@ -44,12 +48,13 @@ export default function Project() {
                 id={id}
                 className={`text-5.5xl leading-12 group relative  cursor-pointer hover:underline decoration-2`}
                 onMouseOver={shownImageOnclik}
+                onMouseOut={hideImage}
               >
                 {title}
                 <Image
                   className="absolute hidden mx-2 transition transform hover:duration-500 top-2 group-hover:inline "
-                  height="15"
-                  width="15"
+                  height="12"
+                  width="12"
                   alt="cheron"
                   src="/assets/icons/upRight_arrow.svg"
                 />
