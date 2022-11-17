@@ -1,3 +1,4 @@
+import Script from "next/script";
 import Wrapper from "../components/wrapper/Wrapper";
 import "../styles/globals.css";
 
