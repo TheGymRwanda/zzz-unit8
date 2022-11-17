@@ -27,7 +27,7 @@ export default function Gallery() {
           </div>
         </section>
       </div>
-      <div className="absolute top-[50%] w-full h-full xl:hidden text-center dummy text-muted-300">
+      <div className="absolute w-full h-full text-center top-2/4 xl:hidden dummy text-muted-300">
         + tap to see more of us
       </div>
     </div>
