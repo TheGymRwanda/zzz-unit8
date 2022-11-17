@@ -16,7 +16,7 @@ export default function Project() {
 
         return (
           <div key={id}>
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <h3
                 id={id}
                 className={`text-5.5xl leading-12 mb-4`}
@@ -39,15 +39,15 @@ export default function Project() {
               </div>
             </div>
 
-            <div className="hidden lg:flex">
+            <div className="hidden xl:flex">
               <h3
                 id={id}
-                className={`text-5.5xl leading-12 group relative  cursor-pointer hover:underline decoration-2  `}
+                className={`text-5.5xl leading-12 group relative  cursor-pointer hover:underline decoration-2`}
                 onMouseOver={shownImageOnclik}
               >
                 {title}
                 <Image
-                  className="absolute hidden mx-2 top-2 group-hover:inline"
+                  className="absolute hidden mx-2 transition transform hover:duration-500 top-2 group-hover:inline "
                   height="15"
                   width="15"
                   alt="cheron"
@@ -57,7 +57,7 @@ export default function Project() {
               <div
                 className={`${
                   id === parseInt(shown)
-                    ? "mb-0 mt-0 self-center absolute right-0 top-16"
+                    ? "mb-0 mt-0 self-center absolute right-0 top-16 duration-1000"
                     : "hidden"
                 } `}
               >
