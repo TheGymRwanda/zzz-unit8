@@ -2,10 +2,7 @@ import Head from "next/head";
 import AboutUs from "../components/sections/AboutUs";
 import BlogPost from "../components/sections/BlogPost";
 import Expertise from "../components/sections/Expertise";
-<<<<<<< HEAD
 import Footer from "../components/sections/Footer";
-=======
->>>>>>> 3f68b0c1cd1545a1cae808364aec7d25bcdfe91d
 import GallerySimulation from "../components/sections/GallerySimulation";
 import Header from "../components/sections/Header";
 import Project from "../components/sections/Project";
