@@ -2,6 +2,7 @@ import Head from "next/head";
 import AboutUs from "../components/sections/AboutUs";
 import BlogPost from "../components/sections/BlogPost";
 import Expertise from "../components/sections/Expertise";
+import GallerySimulation from "../components/sections/GallerySimulation";
 import Header from "../components/sections/Header";
 import Project from "../components/sections/Project";
 import Wrapper from "../components/wrapper/Wrapper";
@@ -17,6 +18,7 @@ export default function Home() {
         <Project />
         <Expertise />
         <AboutUs />
+        <GallerySimulation />
       </Wrapper>
       <BlogPost />
     </>
