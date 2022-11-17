@@ -55,10 +55,12 @@ module.exports = {
         0.6: "0.625rem",
         0.3: "0.375rem",
         0.2: "0.125rem",
+        "layout": "calc(calc(100% - 82rem) / 2)"
       },
       maxWidth: {
         19: "19.375rem",
         48:"18.875rem",
+        "94":"29.8125rem",
         "6.5xl": "78rem",
         "8xl": "82rem",
         "41":"10.5rem",        

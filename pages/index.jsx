@@ -12,6 +12,7 @@ export default function Home() {
     <>
       <Head>
         <title>Unit 8</title>
+        <link data-n-head="ssr" rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
       </Head>
       <Wrapper>
         <Header />
@@ -20,7 +21,9 @@ export default function Home() {
         <AboutUs />
       </Wrapper>
       <BlogPost />
-      <Footer />
+      <Wrapper>
+        <Footer />
+      </Wrapper>
     </>
   );
 }

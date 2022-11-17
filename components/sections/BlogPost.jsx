@@ -85,7 +85,7 @@ export default function BlogPost() {
                     </div>
                 </div>
             </Wrapper>
-            <div ref={mainWrapperRef} className="px-5 mx-auto lg:px-16 md:px-9 flex max-w-full overflow-x-auto gap-6 p-6 hide-scroll">
+            <div ref={mainWrapperRef} className="px-5 mx-auto  2xl:left-layout  relative lg:px-16 md:px-9 flex max-w-full overflow-x-auto gap-6 p-6 hide-scroll">
                 {
                     blogs.map((value, index) => {
                         let {date , title , description, tags} = value;
