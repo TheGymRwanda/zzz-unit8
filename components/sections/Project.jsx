@@ -43,10 +43,10 @@ export default function Project() {
               </div>
             </div>
 
-            <div className="hidden xl:flex">
+            <div className="hidden xl:flex group overflow-hidden">
               <h3
                 id={id}
-                className={`text-5.5xl leading-12 group relative  cursor-pointer hover:underline decoration-2`}
+                className={`text-5.5xl leading-12 group relative  cursor-pointer  after:opacity-0 transition-all duration-500 after:transition-all after:duration-500 after:bg-black after:w-full after:h-[2px] after:absolute after:bottom-0 after:-left-[100%] group-hover:after:left-0 group-hover:after:opacity-100`}
                 onMouseOver={shownImageOnclik}
                 onMouseOut={hideImage}
               >
@@ -62,7 +62,7 @@ export default function Project() {
               <div
                 className={`${
                   id === parseInt(shown)
-                    ? "mb-0 mt-0 self-center absolute right-0 top-16 duration-1000"
+                    ? "mb-0 mt-0 self-center absolute right-0 top-16"
                     : "hidden"
                 } `}
               >

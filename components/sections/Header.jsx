@@ -17,7 +17,7 @@ export default function Header() {
                     and more. Its team
                     of 2,500+ digital specialists across 30+ locations
                     on 5 continents delivers pioneering work on a global
-                    scale with a boutique culture.  <CustomLink text="Contact us" style={"text-2xl"} /> 
+                    scale with a boutique culture.  <CustomLink text="Contact us" link={"mailto:web3@apeunit.com"} style={"text-2xl"} /> 
                 </span>
             </div>
         </section>    

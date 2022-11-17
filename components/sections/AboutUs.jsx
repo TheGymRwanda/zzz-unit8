@@ -67,19 +67,23 @@ export default function AboutUs() {
             </div>
             <div className="flex w-full justify-end md:min-h-96 flex-grow-0">
                 <div className="md:flex md:flex-col gap-6 mb-6.6 hidden w-full text-2xl xl:w-50">
-                    <div className="flex h-8 gap-6 text-muted-300 -tracking-hug">
+                    <div className="flex h-8 gap-6 text-muted-300 -tracking-hug ">
                         {data.map((el, index) => {
                             return (
                                 <div
-                                    className={` transition duration-500 pb-1 cursor-pointer ${
+                                    className={` relative group overflow-hidden   transition duration-300 pb-1 cursor-pointer ${
                                         selectedDiv == index
-                                            ? "border-b-1.5 border-b-primary-300 text-primary-300 "
+                                            ? "text-primary-300 "
                                             : " "
                                     }`}
                                     key={index}
                                     onClick={() => setSelectedDiv(index)}
                                 >
-                                    {el.title}
+                                    <div className={` after:opacity-0 transition-all duration-500 after:transition-all after:duration-500 after:bg-primary-300 after:w-full after:h-[2px] after:absolute after:bottom-0 after:-left-[100%]  ${selectedDiv == index
+                                            ? " after:!left-0 after:opacity-100 "
+                                            : " "}`}>
+                                        {el.title}
+                                    </div>
                                 </div>
                             );
                         })}
