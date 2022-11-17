@@ -14,14 +14,14 @@ export const projectData = [
   {
     id: 3,
     title: "Symplify",
-    image: "/assets/imgs/symplify.png",
+    image: "/assets/imgs/symplify.webp",
     subtitle:
       "Fintech solution providing an alternative to the global remittance market",
   },
   {
     id: 4,
     title: "UTU.io",
-    image: "/assets/imgs/utu.png",
+    image: "/assets/imgs/utu.webp",
     subtitle: "Resources that improve design systems for web3",
   },
   {
@@ -33,7 +33,7 @@ export const projectData = [
   {
     id: 6,
     title: "Lab3",
-    image: "/assets/imgs/lab3.png",
+    image: "/assets/imgs/lab3.webp",
     subtitle: "A web3 knowledge exchange community for music makers",
   },
   {

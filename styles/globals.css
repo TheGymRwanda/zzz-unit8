@@ -12,22 +12,34 @@
 
 @layer components {
   body {
-    @apply font-grotesk overflow-x-hidden;
+    @apply overflow-x-hidden font-grotesk;
   }
 }
 
 ::selection {
-  @apply bg-primary-300 text-white
+  @apply text-white bg-primary-300;
 }
 
 /* hide the scoll but keep the scroll functioning */
 .hide-scroll {
   overflow-y: scroll;
-  scrollbar-width: none; 
+  scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
 }
-.hide-scroll::-webkit-scrollbar { 
+.hide-scroll::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+#randsImages {
+  display: none;
+}
+
+.randoms canvas {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
