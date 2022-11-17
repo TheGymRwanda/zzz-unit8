@@ -39,17 +39,16 @@ export default function BlogPost() {
 
     const scrollBlogForward = () => {
         fetchBlogs();
-        mainWrapperRef.current.scroll(scrollPosition+300,0)
+        mainWrapperRef.current.scroll(scrollPosition+1000,0)
     }
 
 
     
     const scrollBlogBack = () => {
-        console.log(scrollPosition-300)
-        if(scrollPosition-300 == 0) {
+        if(scrollPosition-1000 == 0) {
             setScrolled(false)
         }
-        mainWrapperRef.current.scroll(scrollPosition-300 <= 0 ? 0 : scrollPosition-300 , 0)
+        mainWrapperRef.current.scroll(scrollPosition-1000 <= 0 ? 0 : scrollPosition-1000 , 0)
     }
 
 
