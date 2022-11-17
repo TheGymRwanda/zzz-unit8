@@ -17,13 +17,12 @@ export default function Project() {
 
       {projectData.map((items) => {
         const { id, image, title, subtitle } = items;
-
         return (
           <div key={id}>
             <div className="xl:hidden">
               <h3
                 id={id}
-                className={`text-5.5xl leading-12 mb-4`}
+                className={`mb-4 text-5.5xl leading-12`}
                 onClick={shownImageOnclik}
               >
                 {title}
@@ -37,23 +36,23 @@ export default function Project() {
                   alt="project-image"
                   className="w-full "
                 />
-                <p className="mt-2.5 text-xl leading-7 mb-12 lg:mb-0">
+                <p className="mb-12 text-xl leading-7 mt-2.5 lg:mb-0">
                   {subtitle}
                 </p>
               </div>
             </div>
 
-            <div className="hidden xl:flex group overflow-hidden">
+            <div className="hidden overflow-hidden xl:flex group">
               <h3
                 id={id}
-                className={`text-5.5xl leading-12 group relative  cursor-pointer  after:opacity-0 transition-all duration-500 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-0 after:-left-full group-hover:after:left-0 group-hover:after:opacity-100`}
+                className={`relative transition-all duration-500 cursor-pointer text-5.5xl leading-12 group after:opacity-0 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-0 after:-left-full group-hover:after:left-0 group-hover:after:opacity-100`}
                 onMouseOver={shownImageOnclik}
                 onMouseOut={hideImage}
               >
                 {title}
                 <Image
-                  className="absolute hidden mx-2 transition transform hover:duration-500 top-2 group-hover:inline "
-                  height="12"
+                  className="absolute hidden pt-1 mx-1 transition transform hover:duration-500 top-2 group-hover:inline "
+                  height="16"
                   width="12"
                   alt="cheron"
                   src="/assets/icons/upRight_arrow.svg"
@@ -67,12 +66,11 @@ export default function Project() {
                 } `}
               >
                 <Image
-                  height="437"
-                  width="811"
+                  className="border w-50 h-111 border-muted-50"
                   src={image}
                   alt="project-image"
                 />
-                <p className="mt-2.5 text-xl leading-7">{subtitle}</p>
+                <p className="text-xl leading-7 mt-2.5">{subtitle}</p>
               </div>
             </div>
           </div>

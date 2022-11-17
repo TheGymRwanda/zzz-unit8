@@ -18,7 +18,7 @@ module.exports = {
           300: "#5602E0",
         },
         muted: {
-          400:"#EDEDED",
+          400: "#EDEDED",
           300: "#9A9A9A",
           200: "#878787",
           100: "#E2E2E2",
@@ -29,11 +29,11 @@ module.exports = {
         8.3: "2.125rem",
         12: "4.5rem",
       },
-      letterSpacing:{
-        xs:"0.0099rem",
-        xsm:"0.0124rem",
+      letterSpacing: {
+        xs: "0.0099rem",
+        xsm: "0.0124rem",
         0.01: "0.01rem",
-        'hug': '-0.015rem',
+        hug: "-0.015rem",
       },
       gap: {
         5.5: "1.125rem",
@@ -55,31 +55,32 @@ module.exports = {
         0.6: "0.625rem",
         0.3: "0.375rem",
         0.2: "0.125rem",
-        "layout": "calc(calc(100% - 82rem) / 2)"
+        layout: "calc(calc(100% - 82rem) / 2)",
       },
       maxWidth: {
         19: "19.375rem",
-        48:"18.875rem",
-        "94":"29.8125rem",
+        48: "18.875rem",
+        94: "29.8125rem",
         "6.5xl": "78rem",
         "8xl": "82rem",
-        "41":"10.5rem",        
+        41: "10.5rem",
         "8xl": "82rem",
       },
       minWidth: {
         19: "19.375rem",
-        48:"18.875rem",
+        48: "18.875rem",
         "6.5xl": "78rem",
-        "90":"23.0625rem",
-        "94":"29.8125rem",
+        90: "23.0625rem",
+        94: "29.8125rem",
       },
       minHeight: {
-        "86":"23.0625rem",
-        "94":"29.8125rem",
-        "96":"47.31rem",
+        86: "23.0625rem",
+        94: "29.8125rem",
+        96: "47.31rem",
       },
       height: {
-        "0.1":"0.125rem"
+        0.1: "0.125rem",
+        111: "27.3125rem",
       },
       width: {
         "70w": "70vw",
@@ -96,18 +97,18 @@ module.exports = {
         33: "8.25rem",
       },
       padding: {
-        "2.5":"0.625rem",
-        "0.1":"0.1875rem",
+        2.5: "0.625rem",
+        0.1: "0.1875rem",
       },
       boxShadow: {
-        "custom-sm":"1px 2px 5px rgba(0, 0, 0, 0.25)",
+        "custom-sm": "1px 2px 5px rgba(0, 0, 0, 0.25)",
       },
       borderRadius: {
-        "2.3xl":"1.1875rem",
+        "2.3xl": "1.1875rem",
       },
       borderWidth: {
-        1.5:"0.0938rem"
-      }
+        1.5: "0.0938rem",
+      },
     },
   },
   plugins: [],
