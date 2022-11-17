@@ -17,7 +17,6 @@ export default function Project() {
 
       {projectData.map((items) => {
         const { id, image, title, subtitle } = items;
-
         return (
           <div key={id}>
             <div className="xl:hidden">
@@ -67,7 +66,7 @@ export default function Project() {
                 } `}
               >
                 <Image
-                  className="border w-[811px] h-[437px] border-muted-50"
+                  className="border w-50 h-111 border-muted-50"
                   src={image}
                   alt="project-image"
                 />
