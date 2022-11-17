@@ -47,8 +47,8 @@ function movingImg() {
   let oldMouseY = -1000;
 
   window.processMotion = function (event) {
-    let x = event.gamma / 40; // En degré sur l'interval [-180,180].
-    let y = event.beta / 70 - 0.5; // En degré sur l'interval [-90,90].
+    let x = event.gamma / 40;
+    let y = event.beta / 70 - 0.5;
     let gravityX, gravityY;
     gravityX = (x * ww) / 2 + ww / 2;
     gravityY = (y * wh) / 2 + wh / 2;
