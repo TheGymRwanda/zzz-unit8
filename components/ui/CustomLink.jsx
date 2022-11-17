@@ -5,11 +5,11 @@ export default function CustomLink({ link, text, style, target }) {
   return (
     <Link href={`${link ? link : "/"}`} target={target}>
       <div
-        className={`relative inline-flex items-center text-xl font-normal leading-7 transition-all duration-300 group hover:underline ${style}`}
+        className={`relative transition-all duration-700 inline-flex items-center text-xl font-normal leading-7  group underline hover:no-underline ${style}`}
       >
         <span className="self-end ">{text}</span>
         <div
-          className={`absolute -right-4 top-0.6 group-hover:top-0.2 lg:group-hover:top-0.3 group-hover:-right-5`}
+          className={`absolute  transition-all duration-300 -right-4 top-0.6 group-hover:top-0.2 lg:group-hover:top-0.3 group-hover:-right-5`}
         >
           <Image
             src={"/assets/icons/upRight_arrow.svg"}
