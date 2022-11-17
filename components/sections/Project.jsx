@@ -46,7 +46,7 @@ export default function Project() {
             <div className="hidden xl:flex group overflow-hidden">
               <h3
                 id={id}
-                className={`text-5.5xl leading-12 group relative  cursor-pointer  after:opacity-0 transition-all duration-500 after:transition-all after:duration-500 after:bg-black after:w-full after:h-[2px] after:absolute after:bottom-0 after:-left-[100%] group-hover:after:left-0 group-hover:after:opacity-100`}
+                className={`text-5.5xl leading-12 group relative  cursor-pointer  after:opacity-0 transition-all duration-500 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-0 after:-left-full group-hover:after:left-0 group-hover:after:opacity-100`}
                 onMouseOver={shownImageOnclik}
                 onMouseOut={hideImage}
               >

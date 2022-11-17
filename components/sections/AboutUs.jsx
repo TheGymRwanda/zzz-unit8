@@ -79,7 +79,7 @@ export default function AboutUs() {
                                     key={index}
                                     onClick={() => setSelectedDiv(index)}
                                 >
-                                    <div className={` after:opacity-0 transition-all duration-500 after:transition-all after:duration-500 after:bg-primary-300 after:w-full after:h-[2px] after:absolute after:bottom-0 after:-left-[100%]  ${selectedDiv == index
+                                    <div className={` after:opacity-0 transition-all duration-500 after:transition-all after:duration-500 after:bg-primary-300 after:w-full after:h-0.1 after:absolute after:bottom-0 after:-left-full   ${selectedDiv == index
                                             ? " after:!left-0 after:opacity-100 "
                                             : " "}`}>
                                         {el.title}
