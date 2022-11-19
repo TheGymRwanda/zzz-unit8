@@ -1,4 +1,3 @@
-const TweenMax = require("/public/cdnjs/TweenMax.min.js");
 function movingImg() {
   let ww, wh;
 
@@ -17,7 +16,6 @@ function movingImg() {
   let randoms = document.querySelector(".randoms");
   let canvas = document.getElementById("randCanvas");
   let contex = canvas.getContext("2d");
-  let gravityX, gravityY;
   let randImages = document.querySelectorAll("#randsImages .img");
   let randIndex = 0;
 
@@ -25,18 +23,7 @@ function movingImg() {
   window.onresize = resizeWidthAndHeight();
 
   randoms.style.display = "";
-  // TweenMax.set(randoms, { alpha: 0 });
-  // TweenMax.to(randoms, 0.7, {
-  //   alpha: 1,
-  //   ease: Power3.easeInOut,
-  //   onComplete: function () {
-  //     gravityX = ww / 2;
-  //     gravityY = wh / 2;
 
-  //     window.addEventListener("deviceorientation", window.processMotion);
-  //     randoms.onmousemove = window.randomPics;
-  //   },
-  // });
   randoms.onmousemove = window.randomPics;
   function getDistance(x1, x2, y1, y2) {
     let diffX = x1 - x2;
