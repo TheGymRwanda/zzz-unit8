@@ -21,6 +21,7 @@ function movingImg() {
   let randImages = document.querySelectorAll("#randsImages .img");
   let randIndex = 0;
 
+  window.addEventListener("resize", resizeWidthAndHeight);
   window.onresize = resizeWidthAndHeight();
 
   randoms.style.display = "";
@@ -36,7 +37,6 @@ function movingImg() {
       randoms.onmousemove = window.randomPics;
     },
   });
-
   function getDistance(x1, x2, y1, y2) {
     let diffX = x1 - x2;
     let diffY = y1 - y2;
@@ -46,49 +46,7 @@ function movingImg() {
   let oldMouseX = -1000;
   let oldMouseY = -1000;
 
-  window.processMotion = function (event) {
-    let x = event.gamma / 40;
-    let y = event.beta / 70 - 0.5;
-    let gravityX, gravityY;
-    gravityX = (x * ww) / 2 + ww / 2;
-    gravityY = (y * wh) / 2 + wh / 2;
-
-    gravityX = Math.min(Math.max(gravityX, 50), ww - 50);
-    gravityY = Math.min(Math.max(gravityY, 50), wh - 50);
-
-    let dist = getDistance(oldMouseX, gravityX, oldMouseY, gravityY);
-    if (dist > 20) {
-      oldMouseX = gravityX;
-      oldMouseY = gravityY;
-      if (++randIndex > randImages.length - 1) randIndex = 0;
-      let img = randImages[randIndex];
-      if (img.width && img.height) {
-        if (devicePixelRatio) {
-          contex.drawImage(
-            img,
-            oldMouseX * devicePixelRatio - (img.width / 8) * devicePixelRatio,
-            oldMouseY * devicePixelRatio - (img.height / 8) * devicePixelRatio,
-            (img.width / 4) * devicePixelRatio,
-            (img.height / 4) * devicePixelRatio
-          );
-        } else {
-          contex.drawImage(
-            img,
-            oldMouseX - img.width / 8,
-            oldMouseY - img.height / 8,
-            img.width / 4,
-            img.height / 4
-          );
-        }
-      }
-    }
-  };
-
   window.randomPics = function (e) {
-    if (window.DeviceMotionEvent) {
-      window.removeEventListener("devicemotion", window.processMotion, false);
-    }
-
     let dist = getDistance(oldMouseX, e.clientX, oldMouseY, e.clientY);
     if (dist > 20) {
       oldMouseX = e.clientX;

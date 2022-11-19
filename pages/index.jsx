@@ -26,8 +26,11 @@ export default function Home() {
         <Project />
         <Expertise />
         <AboutUs />
-        <Gallery />
       </Wrapper>
+      <div className="px-5 containe-r mx-auto- lg:px-16 md:px-9">
+        <Gallery />
+      </div>
+
       <BlogPost />
       <Wrapper>
         <Footer />
