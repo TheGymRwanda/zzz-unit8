@@ -1,4 +1,4 @@
-function movingImg() {
+export default function movingImg() {
   let ww, wh;
 
   function resizeWidthAndHeight() {
@@ -87,5 +87,3 @@ function movingImg() {
     }
   };
 }
-
-export default movingImg;
