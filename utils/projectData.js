@@ -20,7 +20,7 @@ export const projectData = [
   },
   {
     id: 3,
-    title: "Symplify",
+    title: "Symplifi",
     image: simplifi,
     subtitle:
       "Fintech solution providing an alternative to the global remittance market",
