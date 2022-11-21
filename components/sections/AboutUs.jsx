@@ -15,7 +15,7 @@ export default function AboutUs() {
         setSelectedDiv(id);
     }
     return (
-        <div>
+        <section>
             <div className="grid w-full gap-6 mb-6.6 text-xl md:hidden ">
                 {data.map((el, index) => {
                     let { title, paragraphs } = el;
@@ -91,6 +91,6 @@ export default function AboutUs() {
                     </Tab.Group>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
