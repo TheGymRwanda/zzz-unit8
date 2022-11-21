@@ -43,15 +43,15 @@ module.exports = {
             spacing: {
                 6.6: "1.6875rem",
                 10.75: "2.6875rem",
-                12: "5.375rem",
-                23: "6.5625rem",
-                13: "3.25rem",
                 11.1: "3rem",
+                12: "5.375rem",
+                13: "3.25rem",
+                23: "6.5625rem",
             },
             inset: {
-                0.6: "0.625rem",
                 0.3: "0.375rem",
                 0.2: "0.125rem",
+                0.6: "0.625rem",
                 layout: "calc(calc(100% - 82rem) / 2)",
             },
             maxWidth: {
@@ -73,21 +73,21 @@ module.exports = {
             },
             width: {
                 "70w": "70vw",
-                73: "18.125rem",
                 50: "50.375rem",
+                73: "18.125rem",
                 74: "19.375rem",
             },
             screens: {
                 xs: "25rem",
             },
             margin: {
-                11.2: "4.8125rem",
                 11.1: "3rem",
+                11.2: "4.8125rem",
                 33: "8.25rem",
             },
             padding: {
-                2.5: "0.625rem",
                 0.1: "0.1875rem",
+                2.5: "0.625rem",
             },
             boxShadow: {
                 "custom-sm": "1px 2px 5px rgba(0, 0, 0, 0.25)",
