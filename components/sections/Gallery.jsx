@@ -4,7 +4,7 @@ import movingImg from "../../utils/moveImage";
 
 export default function Gallery() {
   useEffect(() => {
-    movingImg();
+    window.addEventListener("DOMContentLoaded", movingImg());
   }, []);
   return (
     <div className="relative h-screen">
