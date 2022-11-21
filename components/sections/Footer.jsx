@@ -6,7 +6,9 @@ export default function Footer() {
     <footer>
       <div className="flex flex-col text-xl gap-11.1 -tracking-0.01 md:text-2xl md:flex-row md:justify-between mb-11.1">
         <address className="not-italic">
-          Ape Unit GmbH <br /> Waldemarstraße 38, <br /> 10999 Berlin
+          <p>Ape Unit GmbH</p>
+          <p>Waldemarstraße 38, </p>
+          <p>10999 Berlin</p>
         </address>
         <div className="flex flex-col">
           <CustomLink
