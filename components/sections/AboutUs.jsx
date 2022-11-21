@@ -43,10 +43,10 @@ export default function AboutUs() {
                     );
                 })}
             </div>
-            <div className="flex justify-end flex-grow-0 w-full md:min-h-96">
+            <div className="flex justify-end flex-grow-0 w-full md:min-h-94">
                 <div className="md:flex md:flex-col gap-6 mb-6.6 hidden w-full text-2xl xl:w-50">
                     <Tab.Group defaultIndex={0}>
-                        <Tab.List className="flex h-8 gap-6 text-muted-300 -tracking-lg ">
+                        <Tab.List className="flex h-8 gap-10.75 text-muted-300 -tracking-lg ">
                             {data.map((el, index) => (
                                 <Tab
                                     key={index}

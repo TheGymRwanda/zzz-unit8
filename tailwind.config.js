@@ -29,8 +29,8 @@ module.exports = {
             letterSpacing: {
                 xs: "0.0099rem",
                 xsm: "0.0124rem",
-                sm: "0.01rem",
-                lg: "0.015rem",
+                sm: "0.01em",
+                lg: "0.015em",
             },
             gap: {
                 5.5: "1.125rem",
@@ -42,6 +42,7 @@ module.exports = {
             },
             spacing: {
                 6.6: "1.6875rem",
+                10.75: "2.6875rem",
                 12: "5.375rem",
                 23: "6.5625rem",
                 13: "3.25rem",
