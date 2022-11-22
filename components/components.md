@@ -4,4 +4,4 @@
 
 -  sections `folder contains components which is considered as a section`
 
--  wrapper `component that controls the screen paddings/margin`
+-  Layout `component that controls the screen paddings/margin`

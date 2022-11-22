@@ -1,5 +1,5 @@
 import Script from "next/script";
-import Wrapper from "../components/wrapper/Wrapper";
+import Layout from "../components/layout/Layout";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
