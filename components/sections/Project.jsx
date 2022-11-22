@@ -19,10 +19,10 @@ export default function Project() {
         const { id, image, title, subtitle, link } = items;
         return (
           <div key={id}>
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <h3
                 id={id}
-                className={`mb-4 text-5.5xl leading-tighter`}
+                className={`mb-4 text-5.4xl leading-11 xs:leading-12 xs:text-6.5xl`}
                 onClick={shownImageOnclik}
               >
                 {title}
@@ -48,7 +48,7 @@ export default function Project() {
               </Link>
             </div>
 
-            <div className="hidden overflow-hidden lg:flex">
+            <div className="hidden overflow-hidden xl:flex">
               <Link href={link} target="_blank" className="group">
                 <h3
                   id={id}
@@ -69,18 +69,16 @@ export default function Project() {
               <div
                 className={`${
                   id === parseInt(shown)
-                    ? "mb-0 mt-0 self-center absolute right-0 top-10 opacity-100 transition-all duration-700 w-full"
+                    ? "mb-0 mt-2 self-center absolute right-0 top-10 opacity-100 transition-all duration-700"
                     : "opacity-0 h-0"
                 } `}
               >
-                <div className="w-2/3 ml-auto max-w-3.8xl">
-                  <Image
-                    className="w-full rounded-1.5xl drop-shadow-3xl"
-                    src={image}
-                    alt="project-image"
-                  />
-                  <p className="text-xl leading-7 mt-2.5">{subtitle}</p>
-                </div>
+                <Image
+                  className="max-w-3.8xl rounded-1.5xl drop-shadow-3xl"
+                  src={image}
+                  alt="project-image"
+                />
+                <p className="text-xl leading-7 mt-2.5">{subtitle}</p>
               </div>
             </div>
           </div>
