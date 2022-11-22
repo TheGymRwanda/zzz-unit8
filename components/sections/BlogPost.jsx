@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react"
 import Blog from "../ui/Blog"
-import Wrapper from "../wrapper/Wrapper"
+import Layout from "../layout/Layout"
 import blogData from "/utils/blogData"
 import RightArrow from "../vectors/Arrow"
 
@@ -69,7 +69,7 @@ export default function BlogPost() {
    
     return(
         <div className="relative mx-auto mb-32">
-            <Wrapper>
+            <Layout>
                 <div className="flex items-center gap-4 mb-5">
                     <h3 className="relative text-xl font-normal leading-8 text-muted-300 font-grotesk ">
                         Blog
@@ -83,7 +83,7 @@ export default function BlogPost() {
                         </div>
                     </div>
                 </div>
-            </Wrapper>
+            </Layout>
             <div ref={mainWrapperRef} className="relative flex max-w-full gap-6 p-6 px-5 overflow-x-auto lg:px-16 md:px-9 hide-scroll">
                 {
                     blogs.map((value, index) => {
