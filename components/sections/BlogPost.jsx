@@ -68,13 +68,13 @@ export default function BlogPost() {
 
    
     return(
-        <div className="mb-32 mx-auto relative">
+        <div className="relative mx-auto mb-32">
             <Wrapper>
-                <div className="flex items-center mb-5 gap-4">
-                    <h3 className="relative text-muted-300 font-grotesk  font-normal leading-8 text-xl ">
+                <div className="flex items-center gap-4 mb-5">
+                    <h3 className="relative text-xl font-normal leading-8 text-muted-300 font-grotesk ">
                         Blog
                     </h3>
-                    <div className="hidden xl:flex relative gap-2 items-center self-center mt-2">
+                    <div className="relative items-center self-center hidden gap-2 mt-2 xl:flex">
                         <div className="rotate-180 cursor-pointer" onClick={scrollBlogBack}>
                             <RightArrow stroke={ !scrolled ? "#9A9A9A" :  ""} />
                         </div>
@@ -84,7 +84,7 @@ export default function BlogPost() {
                     </div>
                 </div>
             </Wrapper>
-            <div ref={mainWrapperRef} className="px-5 mx-auto  2xl:left-layout  relative lg:px-16 md:px-9 flex max-w-full overflow-x-auto gap-6 p-6 hide-scroll">
+            <div ref={mainWrapperRef} className="relative flex max-w-full gap-6 p-6 px-5 overflow-x-auto lg:px-16 md:px-9 hide-scroll">
                 {
                     blogs.map((value, index) => {
                         let {date , title , description, tags} = value;
@@ -93,7 +93,7 @@ export default function BlogPost() {
                                 {
                                     tags.map((value,index) => (
                                         <div key={index} className="bg-muted-50 rounded-2.3xl px-2.5 py-01">
-                                            <p className="text-muted-200 text-lg font-normal">
+                                            <p className="text-lg font-normal text-muted-200">
                                                 {value}
                                             </p>                                        
                                         </div>
