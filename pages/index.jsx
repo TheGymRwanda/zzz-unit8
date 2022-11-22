@@ -6,7 +6,7 @@ import Footer from "../components/sections/Footer";
 import Gallery from "../components/sections/Gallery";
 import Header from "../components/sections/Header";
 import Project from "../components/sections/Project";
-import Wrapper from "../components/wrapper/Wrapper";
+import Layout from "../components/layout/Layout";
 
 export default function Home() {
   return (
@@ -21,17 +21,17 @@ export default function Home() {
           sizes="any"
         />
       </Head>
-      <Wrapper>
+      <Layout>
         <Header />
         <Project />
         <Expertise />
         <AboutUs />
         <Gallery />
-      </Wrapper>
+      </Layout>
       <BlogPost />
-      <Wrapper>
+      <Layout>
         <Footer />
-      </Wrapper>
+      </Layout>
     </>
   );
 }
