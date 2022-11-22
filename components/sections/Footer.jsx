@@ -4,7 +4,7 @@ import CustomLink from "../ui/CustomLink";
 export default function Footer() {
   return (
     <footer>
-      <div className="flex flex-col text-xl gap-11.1 -tracking-0.01 md:text-2xl md:flex-row md:justify-between mb-11.1">
+      <div className="flex flex-col text-xl gap-11.1 -tracking-0.01 md:text-2xl md:flex-row md:justify-between md:mb-11.1 lg:mb-14 mb-22.7 xl:mb-13.1">
         <address className="not-italic">
           <p>Ape Unit GmbH</p>
           <p>Waldemarstraße 38, </p>

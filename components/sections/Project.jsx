@@ -13,9 +13,8 @@ export default function Project() {
     setShown(0);
   };
   return (
-    <div className="flex flex-col lg:relative mb-13 md:mb-23">
-      <h4 className="text-xl leading-7 text-muted-300">Projects</h4>
-
+    <div className="flex flex-col lg:relative xl:mb-34 lg:mb-12.1 md:mb-24.2 mb-11.8">
+      <h4 className="text-xl leading-7 text-muted-300 md:mb-2.7">Projects</h4>
       {projectData.map((items) => {
         const { id, image, title, subtitle, link } = items;
         return (
@@ -72,7 +71,7 @@ export default function Project() {
               <div
                 className={`${
                   id === parseInt(shown)
-                    ? "mb-0 mt-0 self-center absolute right-0 top-16 opacity-100 transition-all duration-500 transition-all duration-700"
+                    ? "mb-0 mt-0 self-center absolute right-0 top-4 opacity-100 transition-all duration-500 transition-all duration-700"
                     : "opacity-0 h-0"
                 } `}
               >
