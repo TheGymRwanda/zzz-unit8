@@ -20,7 +20,7 @@ export default function Project() {
         const { id, image, title, subtitle, link } = items;
         return (
           <div key={id}>
-            <div className="xl:hidden">
+            <div className="lg:hidden">
               <h3
                 id={id}
                 className={`mb-4 text-5.5xl leading-tighter`}
@@ -29,20 +29,18 @@ export default function Project() {
                 {title}
               </h3>
 
-              <Link href={link}>
+              <Link href={link} target="_blank">
                 <div
                   className={`${
                     id === parseInt(shown)
-                      ? "transition-all duration-500 transition-all duration-700"
+                      ? "transition-all duration-700"
                       : "hidden"
                   }`}
                 >
                   <Image
-                    height="191"
-                    width="349"
                     src={image}
                     alt="project-image"
-                    className="w-full -z-50"
+                    className="w-full -z-50 rounded-1.5xl drop-shadow-3xl"
                   />
                   <p className="mb-12 text-xl leading-7 mt-2.5 lg:mb-0">
                     {subtitle}
@@ -51,11 +49,11 @@ export default function Project() {
               </Link>
             </div>
 
-            <div className="hidden overflow-hidden xl:flex">
-              <Link href={link} className="group">
+            <div className="hidden overflow-hidden lg:flex">
+              <Link href={link} target="_blank" className="group">
                 <h3
                   id={id}
-                  className={`relative transition-all duration-500 cursor-pointer text-5.5xl leading-tighter group after:opacity-0 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-1 after:-left-full group-hover:after:left-0 group-hover:after:opacity-100`}
+                  className={`relative z-10 transition-all duration-500 cursor-pointer text-5.5xl leading-tighter group after:opacity-0 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-1 after:-left-full group-hover:after:left-0 group-hover:after:opacity-100`}
                   onMouseOver={shownImageOnclik}
                   onMouseOut={hideImage}
                 >
@@ -72,16 +70,18 @@ export default function Project() {
               <div
                 className={`${
                   id === parseInt(shown)
-                    ? "mb-0 mt-0 self-center absolute right-0 top-16 opacity-100 transition-all duration-500 transition-all duration-700"
+                    ? "mb-0 mt-0 self-center absolute right-0 top-10 opacity-100 transition-all duration-700 w-full"
                     : "opacity-0 h-0"
                 } `}
               >
-                <Image
-                  className="border w-50 h-111 border-muted-50"
-                  src={image}
-                  alt="project-image"
-                />
-                <p className="text-xl leading-7 mt-2.5">{subtitle}</p>
+                <div className="w-2/3 ml-auto max-w-3.8xl">
+                  <Image
+                    className="w-full rounded-1.5xl drop-shadow-3xl"
+                    src={image}
+                    alt="project-image"
+                  />
+                  <p className="text-xl leading-7 mt-2.5">{subtitle}</p>
+                </div>
               </div>
             </div>
           </div>

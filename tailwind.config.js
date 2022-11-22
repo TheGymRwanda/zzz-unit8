@@ -58,6 +58,7 @@ module.exports = {
       },
       maxWidth: {
         sm: "29.8125rem",
+        "3.8xl": "50.6875rem",
         "8xl": "90rem",
       },
       minWidth: {
@@ -94,10 +95,14 @@ module.exports = {
         "custom-sm": "1px 2px 5px rgba(0, 0, 0, 0.25)",
       },
       borderRadius: {
+        "1.5xl": ".875rem",
         "2.3xl": "1.1875rem",
       },
       borderWidth: {
         1.5: "0.0938rem",
+      },
+      dropShadow: {
+        "3xl": "1px 1px 14px rgba(0, 0, 0, 0.1)",
       },
     },
   },
