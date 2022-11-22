@@ -15,6 +15,7 @@ module.exports = {
           300: "#5602E0",
         },
         muted: {
+          500: "#E4E4E4",
           400: "#EDEDED",
           300: "#9A9A9A",
           200: "#878787",
@@ -25,6 +26,7 @@ module.exports = {
       lineHeight: {
         8.3: "2.125rem",
         12: "4.5rem",
+        tighter: "1.125",
       },
       letterSpacing: {
         xs: "0.0099rem",
