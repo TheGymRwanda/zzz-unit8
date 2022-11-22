@@ -1,7 +1,14 @@
 const TweenMax = require("/public/cdnjs/TweenMax.min.js");
-function movingImg() {
-  let ww, wh;
 
+function movingImg() {
+  let prev = {
+    imgs: "",
+    dx: 0,
+    dy: 0,
+    dh: 0,
+    dw: 0,
+  };
+  let ww, wh;
   function resizeWidthAndHeight() {
     ww = window.innerWidth;
     wh = window.innerHeight;
@@ -20,9 +27,8 @@ function movingImg() {
   let gravityX, gravityY;
   let randImages = document.querySelectorAll("#randsImages .img");
   let randIndex = 0;
-
+  let def = document.querySelector(".def");
   window.onresize = resizeWidthAndHeight();
-
   randoms.style.display = "";
   TweenMax.set(randoms, { alpha: 0 });
   TweenMax.to(randoms, 0.7, {
@@ -32,7 +38,6 @@ function movingImg() {
       gravityX = ww / 2;
       gravityY = wh / 2;
 
-      window.addEventListener("deviceorientation", window.processMotion);
       randoms.onmousemove = window.randomPics;
     },
   });
@@ -46,49 +51,7 @@ function movingImg() {
   let oldMouseX = -1000;
   let oldMouseY = -1000;
 
-  window.processMotion = function (event) {
-    let x = event.gamma / 40;
-    let y = event.beta / 70 - 0.5;
-    let gravityX, gravityY;
-    gravityX = (x * ww) / 2 + ww / 2;
-    gravityY = (y * wh) / 2 + wh / 2;
-
-    gravityX = Math.min(Math.max(gravityX, 50), ww - 50);
-    gravityY = Math.min(Math.max(gravityY, 50), wh - 50);
-
-    let dist = getDistance(oldMouseX, gravityX, oldMouseY, gravityY);
-    if (dist > 20) {
-      oldMouseX = gravityX;
-      oldMouseY = gravityY;
-      if (++randIndex > randImages.length - 1) randIndex = 0;
-      let img = randImages[randIndex];
-      if (img.width && img.height) {
-        if (devicePixelRatio) {
-          contex.drawImage(
-            img,
-            oldMouseX * devicePixelRatio - (img.width / 8) * devicePixelRatio,
-            oldMouseY * devicePixelRatio - (img.height / 8) * devicePixelRatio,
-            (img.width / 4) * devicePixelRatio,
-            (img.height / 4) * devicePixelRatio
-          );
-        } else {
-          contex.drawImage(
-            img,
-            oldMouseX - img.width / 8,
-            oldMouseY - img.height / 8,
-            img.width / 4,
-            img.height / 4
-          );
-        }
-      }
-    }
-  };
-
   window.randomPics = function (e) {
-    if (window.DeviceMotionEvent) {
-      window.removeEventListener("devicemotion", window.processMotion, false);
-    }
-
     let dist = getDistance(oldMouseX, e.clientX, oldMouseY, e.clientY);
     if (dist > 20) {
       oldMouseX = e.clientX;
@@ -100,6 +63,9 @@ function movingImg() {
       if (img.width && img.height) {
         if (ww > 600) {
           if (devicePixelRatio) {
+            if (prev.imgs !== "") {
+              contex.drawImage(def, prev.dx, prev.dy, prev.dw, prev.dh);
+            }
             contex.drawImage(
               img,
               oldMouseX * devicePixelRatio - (img.width * devicePixelRatio) / 4,
@@ -108,7 +74,18 @@ function movingImg() {
               (img.width * devicePixelRatio) / 2,
               (img.height * devicePixelRatio) / 2
             );
+            prev.imgs = img;
+            prev.dx =
+              oldMouseX * devicePixelRatio - (img.width * devicePixelRatio) / 4;
+            prev.dy =
+              oldMouseY * devicePixelRatio -
+              (img.height * devicePixelRatio) / 4;
+            prev.dh = (img.height * devicePixelRatio) / 2;
+            prev.dw = (img.width * devicePixelRatio) / 2;
           } else {
+            if (prev.imgs !== "") {
+              contex.drawImage(def, prev.dx, prev.dy, prev.dw, prev.dh);
+            }
             contex.drawImage(
               img,
               oldMouseX - img.width / 2,
@@ -116,9 +93,20 @@ function movingImg() {
               img.width,
               img.height
             );
+            prev.imgs = img;
+            prev.dx =
+              oldMouseX * devicePixelRatio - (img.width * devicePixelRatio) / 2;
+            prev.dy =
+              oldMouseY * devicePixelRatio -
+              (img.height * devicePixelRatio) / 2;
+            prev.dh = img.height;
+            prev.dw = img.width;
           }
         } else {
           if (devicePixelRatio) {
+            if (prev.imgs !== "") {
+              contex.drawImage(def, prev.dx, prev.dy, prev.dw, prev.dh);
+            }
             contex.drawImage(
               img,
               oldMouseX * devicePixelRatio - img.width / 4,
@@ -126,8 +114,20 @@ function movingImg() {
               img.width / 2,
               img.height / 2
             );
+            prev.imgs = img;
+            prev.dx =
+              oldMouseX * devicePixelRatio - (img.width * devicePixelRatio) / 4;
+            prev.dy =
+              oldMouseY * devicePixelRatio -
+              (img.height * devicePixelRatio) / 4;
+            prev.dh = (img.height * devicePixelRatio) / 2;
+            prev.dw = (img.width * devicePixelRatio) / 2;
+
             document.querySelector(".dummy").style.display = "none";
           } else {
+            if (prev.imgs !== "") {
+              contex.drawImage(def, prev.dx, prev.dy, prev.dw, prev.dh);
+            }
             contex.drawImage(
               img,
               oldMouseX - img.width / 4,
@@ -135,6 +135,14 @@ function movingImg() {
               img.width / 2,
               img.height / 2
             );
+            prev.imgs = img;
+            prev.dx =
+              oldMouseX * devicePixelRatio - (img.width * devicePixelRatio) / 4;
+            prev.dy =
+              oldMouseY * devicePixelRatio -
+              (img.height * devicePixelRatio) / 4;
+            prev.dh = (img.height * devicePixelRatio) / 2;
+            prev.dw = (img.width * devicePixelRatio) / 2;
           }
         }
       }
