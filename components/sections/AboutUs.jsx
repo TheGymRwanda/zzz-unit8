@@ -17,7 +17,7 @@ export default function AboutUs() {
         {data.map((el, index) => {
           let { title, paragraphs } = el;
           return (
-            <div className="grid gap-4" key={index}>
+            <div className="grid gap-5" key={index}>
               <div
                 className={`flex items-center justify-between border-b cursor-pointer border-b-black -tracking-lg ${
                   selectedDiv === index &&
@@ -29,7 +29,9 @@ export default function AboutUs() {
                 <UpArrow color={selectedDiv === index} />
               </div>
               <div
-                className={`gap-6 ${selectedDiv === index ? "grid" : "hidden"}`}
+                className={`${
+                  selectedDiv === index ? "grid mb-11.18" : "hidden"
+                }`}
               >
                 <p className="pb-6.5">{paragraphs[0]}</p>
                 <p>{paragraphs[1] || ""}</p>
@@ -39,7 +41,7 @@ export default function AboutUs() {
         })}
       </div>
       <div className="flex justify-end flex-grow-0 w-full md:min-h-94">
-        <div className="hidden w-4/5 gap-6 text-2xl md:flex md:flex-col mb-6.6 xl:w-50">
+        <div className="hidden w-4/5 gap-6 text-2xl md:flex md:flex-col mb-6.6 xl:w-50.5">
           <Tab.Group defaultIndex={0}>
             <Tab.List className="flex h-8 gap-10.75 text-muted-300 -tracking-lg">
               {data.map((el, index) => (
@@ -62,9 +64,7 @@ export default function AboutUs() {
               {data.map((el, idx) => (
                 <Tab.Panel
                   key={idx}
-                  className={classNames(
-                    "grid gap-4 transition-all duration-500"
-                  )}
+                  className={classNames("grid transition-all duration-500")}
                 >
                   <div className="lg:pb-7 md:pb-6.7">
                     {el.paragraphs[0]}{" "}
