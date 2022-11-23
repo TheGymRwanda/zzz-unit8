@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Layout from "../../layout/Layout";
 import blogData from "/utils/blogData";
 import RightArrow from "../../vectors/Arrow";
-import RenderPosts from "./RanderPosts"
+import RanderPost from "./RanderPosts"
 
 export default function Posts() {
   const [blogs, setBlogs] = useState([]);
@@ -76,7 +76,7 @@ export default function Posts() {
         ref={mainWrapperRef}
         className="relative flex max-w-full gap-6 p-6 px-5 overflow-x-auto lg:px-16 md:px-9 hide-scroll"
       >
-        <RenderPosts blogs={blogs} />
+        <RanderPost blogs={blogs} />
       </div>
     </div>
   );
