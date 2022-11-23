@@ -25,6 +25,7 @@ module.exports = {
       },
       lineHeight: {
         8.3: "2.125rem",
+        11: "4rem",
         12: "4.5rem",
         tighter: "1.125",
       },
@@ -40,7 +41,9 @@ module.exports = {
       fontSize: {
         "2.5xl": "1.25rem",
         "2.9xl": "1.75rem",
+        "5.4xl": "3.25rem",
         "5.5xl": "3.625rem",
+        "6.5xl": "4rem",
       },
       spacing: {
         2.7: "0.6875rem",
@@ -50,7 +53,6 @@ module.exports = {
         8.1: "2.0625rem",
         10.75: "2.6875rem",
         11.1: "3rem",
-
         11.2: "4.1744rem",
         11.5: "4.5rem",
         11.6: "5.0625rem",
@@ -76,6 +78,7 @@ module.exports = {
       },
       maxWidth: {
         sm: "29.8125rem",
+        "3.8xl": "50.6875rem",
         "8xl": "90rem",
       },
       minWidth: {
@@ -112,10 +115,14 @@ module.exports = {
         "custom-sm": "1px 2px 5px rgba(0, 0, 0, 0.25)",
       },
       borderRadius: {
+        "1.5xl": ".875rem",
         "2.3xl": "1.1875rem",
       },
       borderWidth: {
         1.5: "0.0938rem",
+      },
+      dropShadow: {
+        "3xl": "1px 1px 14px rgba(0, 0, 0, 0.1)",
       },
     },
   },

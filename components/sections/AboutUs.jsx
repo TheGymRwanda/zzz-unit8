@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import { data } from "/utils/aboutUsData";
+import { useState } from "react";
+import classNames from "../../utils/classNames";
 import CustomLink from "../ui/CustomLink";
 import UpArrow from "../vectors/UpArrow";
-import classNames from "../../utils/classNames";
+import { data } from "/utils/aboutUsData";
 
 export default function AboutUs() {
   const [selectedDiv, setSelectedDiv] = useState(0);
@@ -13,7 +13,7 @@ export default function AboutUs() {
   }
   return (
     <section>
-      <div className="grid w-full gap-6 mb-6.6 text-xl md:hidden">
+      <div className="grid w-full gap-6 text-xl mb-6.6 md:hidden">
         {data.map((el, index) => {
           let { title, paragraphs } = el;
           return (
@@ -39,7 +39,7 @@ export default function AboutUs() {
         })}
       </div>
       <div className="flex justify-end flex-grow-0 w-full md:min-h-94">
-        <div className="md:flex md:flex-col gap-6 mb-6.6 hidden w-full text-2xl xl:w-50">
+        <div className="hidden w-4/5 gap-6 text-2xl md:flex md:flex-col mb-6.6 xl:w-50">
           <Tab.Group defaultIndex={0}>
             <Tab.List className="flex h-8 gap-10.75 text-muted-300 -tracking-lg">
               {data.map((el, index) => (
