@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { galery } from "../../utils/galery";
 import movingImg from "../../utils/moveImage";
-import df from "/public/assets/imgs/team_of_4.webp"
+import grayImage from "/public/assets/imgs/default.webp";
 import Image from "next/image";
 export default function Gallery() {
   useEffect(() => {
@@ -9,14 +9,19 @@ export default function Gallery() {
   }, []);
   return (
     <div className="relative h-screen">
-      <div id="randsImages" className="">
-        {galery.map((im) => {
+      <div id="randsImages">
+        {galery.map((images) => {
           return (
-            <img src={im.picture} key={im.id} alt="users" className="img" />
+            <Image
+              src={images.picture}
+              key={images.id}
+              alt="users"
+              className="img"
+            />
           );
         })}
       </div>
-      <img src="/assets/imgs/default.png" alt="" className="def hidden" />
+      <Image src={grayImage} alt="" className="hidden gray-img" />
       <div className="wrapper">
         <section className="randomPage">
           <div className="block opacity-100 randoms">
