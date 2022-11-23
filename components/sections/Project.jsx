@@ -52,7 +52,7 @@ export default function Project() {
               <Link href={link} target="_blank" className="group">
                 <h3
                   id={id}
-                  className={`relative transition-all duration-500 cursor-pointer text-5.5xl leading-tighter group after:opacity-0 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-1 after:-left-full group-hover:after:left-0 group-hover:after:opacity-100`}
+                  className={`relative transition-all duration-500 cursor-pointer text-5.5xl leading-12 group after:opacity-0 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-1 after:-left-full group-hover:after:left-0 group-hover:after:opacity-100`}
                   onMouseOver={shownImageOnclik}
                   onMouseOut={hideImage}
                 >
