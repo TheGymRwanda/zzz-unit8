@@ -27,7 +27,7 @@ function movingImg() {
   let gravityX, gravityY;
   let randImages = document.querySelectorAll("#randsImages .img");
   let randIndex = 0;
-  let def = document.querySelector(".gray-img");
+  let defaultImage = document.querySelector(".gray-img");
   window.onresize = resizeWidthAndHeight();
   randoms.style.display = "";
   TweenMax.set(randoms, { alpha: 0 });
@@ -64,13 +64,7 @@ function movingImg() {
         if (ww > 600) {
           if (devicePixelRatio) {
             if (previousImage.imgs !== "") {
-              contex.drawImage(
-                def,
-                previousImage.dx,
-                previousImage.dy,
-                previousImage.dw,
-                previousImage.dh
-              );
+              contex.drawImage(defaultImage, previousImage.dx, previousImage.dy, previousImage.dw, previousImage.dh);
             }
             contex.drawImage(
               img,
@@ -80,6 +74,7 @@ function movingImg() {
               (img.width * devicePixelRatio) / 2,
               (img.height * devicePixelRatio) / 2
             );
+            
             previousImage.imgs = img;
             previousImage.dx =
               oldMouseX * devicePixelRatio - (img.width * devicePixelRatio) / 4;
@@ -90,13 +85,7 @@ function movingImg() {
             previousImage.dw = (img.width * devicePixelRatio) / 2;
           } else {
             if (previousImage.imgs !== "") {
-              contex.drawImage(
-                def,
-                previousImage.dx,
-                previousImage.dy,
-                previousImage.dw,
-                previousImage.dh
-              );
+              contex.drawImage(defaultImage, previousImage.dx, previousImage.dy, previousImage.dw, previousImage.dh);
             }
             contex.drawImage(
               img,
@@ -117,13 +106,7 @@ function movingImg() {
         } else {
           if (devicePixelRatio) {
             if (previousImage.imgs !== "") {
-              contex.drawImage(
-                def,
-                previousImage.dx,
-                previousImage.dy,
-                previousImage.dw,
-                previousImage.dh
-              );
+              contex.drawImage(defaultImage, previousImage.dx, previousImage.dy, previousImage.dw, previousImage.dh);
             }
             contex.drawImage(
               img,
@@ -144,13 +127,7 @@ function movingImg() {
             document.querySelector(".dummy").style.display = "none";
           } else {
             if (previousImage.imgs !== "") {
-              contex.drawImage(
-                def,
-                previousImage.dx,
-                previousImage.dy,
-                previousImage.dw,
-                previousImage.dh
-              );
+              contex.drawImage(defaultImage, previousImage.dx, previousImage.dy, previousImage.dw, previousImage.dh);
             }
             contex.drawImage(
               img,
