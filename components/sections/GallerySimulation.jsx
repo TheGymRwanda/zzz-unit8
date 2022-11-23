@@ -7,14 +7,31 @@ export default function GallerySimulation() {
   return (
     <section>
       <div className="relative hidden min-h-screen xl:block">
-        <Image src={image1} className="absolute w-74 top-20" />
-        <Image src={image2} className="absolute top-0 w-74 left-24 z-[2]" />
-        <Image src={image3} className="absolute w-74 top-64 left-60 z-[3]" />
+        <Image
+          src={image1}
+          className="absolute w-74 top-20"
+          alt="img-simulation"
+        />
+        <Image
+          src={image2}
+          className="absolute top-0 w-74 left-24 z-[2]"
+          alt="img-simulation"
+        />
+        <Image
+          src={image3}
+          className="absolute w-74 top-64 left-60 z-[3]"
+          alt="img-simulation"
+        />
         <Image
           src={image1}
           className="absolute w-74 top-8 left-[18.75rem] z-[4]"
+          alt="img-simulation"
         />
-        <Image src={image2} className="absolute top-0 w-74 left-24 z-[2]" />
+        <Image
+          src={image2}
+          className="absolute top-0 w-74 left-24 z-[2]"
+          alt="img-simulation"
+        />
       </div>
       <div></div>
     </section>
