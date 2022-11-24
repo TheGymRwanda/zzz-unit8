@@ -22,7 +22,7 @@ export default function Project() {
             <div className="xl:hidden">
               <h3
                 id={id}
-                className={`mb-4 text-5.4xl leading-11 xs:leading-12 xs:text-6.5xl`}
+                className={`mb-1 text-5.4xl leading-11 xs:leading-12 xs:text-6.5xl`}
                 onClick={shownImageOnclik}
               >
                 {title}
@@ -32,7 +32,7 @@ export default function Project() {
                 <div
                   className={`${
                     id === parseInt(shown)
-                      ? "transition-all duration-700"
+                      ? "transition-all duration-700 mt-5"
                       : "hidden"
                   }`}
                 >
@@ -41,7 +41,7 @@ export default function Project() {
                     alt="project-image"
                     className="w-full -z-50 rounded-1.5xl drop-shadow-3xl"
                   />
-                  <p className="mb-12 text-xl leading-7 mt-2.5 lg:mb-0">
+                  <p className="mt-3 mb-12 md:mb-11.19 text-xl leading-7">
                     {subtitle}
                   </p>
                 </div>
@@ -52,13 +52,13 @@ export default function Project() {
               <Link href={link} target="_blank" className="group">
                 <h3
                   id={id}
-                  className={`relative transition-all duration-500 cursor-pointer text-5.5xl leading-12 group after:opacity-0 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-1 after:-left-full group-hover:after:left-0 group-hover:after:opacity-100`}
+                  className={`relative transition-all duration-500 cursor-pointer text-6.5xl leading-12 group after:opacity-0 after:transition-all after:duration-500 after:bg-black after:w-full after:h-0.1 after:absolute after:bottom-1 after:-left-full group-hover:after:left-1.5 group-hover:after:opacity-100`}
                   onMouseOver={shownImageOnclik}
                   onMouseOut={hideImage}
                 >
                   {title}
                   <Image
-                    className="absolute pt-1 mx-1 opacity-0 group-hover:transition group-hover:opacity-100 group-hover:transform group-hover:duration-700 top-2 group-hover:inline"
+                    className="absolute pt-1 mx-1 opacity-0 top-2.5 group-hover:transition group-hover:opacity-100 group-hover:transform group-hover:duration-700 group-hover:inline"
                     height="16"
                     width="12"
                     alt="cheron"
@@ -78,7 +78,7 @@ export default function Project() {
                   src={image}
                   alt="project-image"
                 />
-                <p className="text-xl leading-7 mt-2.5">{subtitle}</p>
+                <p className="mt-2 text-xl leading-7">{subtitle}</p>
               </div>
             </div>
           </div>
