@@ -127,6 +127,9 @@ module.exports = {
       dropShadow: {
         "3xl": "1px 1px 14px rgba(0, 0, 0, 0.1)",
       },
+      transitionDuration: {
+        '0.4': '0.4s',
+      }
     },
   },
   plugins: [],

@@ -24,6 +24,7 @@ function movingImg() {
   let randoms = document.querySelector(".randoms");
   let canvas = document.getElementById("randCanvas");
   let contex = canvas.getContext("2d");
+  // let container = document.querySelector(".wrapper");
   let gravityX, gravityY;
   let randImages = document.querySelectorAll("#randsImages .img");
   let randIndex = 0;
@@ -52,6 +53,7 @@ function movingImg() {
   let oldMouseY = -1000;
 
   window.randomPics = function (e) {
+    // let rect = container.getBoundingClientRect();
     let dist = getDistance(oldMouseX, e.clientX, oldMouseY, e.clientY);
     if (dist > 20) {
       oldMouseX = e.clientX;

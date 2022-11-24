@@ -1,17 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react";
-import Blog from "../ui/Blog";
-import Layout from "../layout/Layout";
+import Layout from "../../layout/Layout";
 import blogData from "/utils/blogData";
-import RightArrow from "../vectors/Arrow";
+import RightArrow from "../../vectors/Arrow";
+import RanderPost from "./RanderPosts"
 
-export default function BlogPost() {
+export default function Posts() {
   const [blogs, setBlogs] = useState([]);
   const [blogLength, setBlogLength] = useState(0);
   const [blogCounter, setBlogCounter] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  let mainWrapperRef = useRef();
+  const mainWrapperRef = useRef();
 
   const fetchBlogs = () => {
     setBlogCounter(blogCounter < blogLength ? blogCounter + 1 - 1 : 0);
@@ -20,16 +20,11 @@ export default function BlogPost() {
     setBlogs(blogClone);
   };
 
-  {
-    /* this function is for the scroll similation, once we start integration we can implement it in defferent way so that it adapt the api data */
-  }
   const triggerScroll = (mainWrapperRef) => {
     mainWrapperRef.current.addEventListener("scroll", (e) => {
       let scrollPosition = e.target.scrollLeft;
       setScrollPosition(scrollPosition);
-      let scrollablePx =
-        Math.ceil(mainWrapperRef.current.scrollWidth) -
-        Math.ceil(mainWrapperRef.current.offsetWidth);
+      let scrollablePx = Math.ceil(mainWrapperRef.current.scrollWidth) - Math.ceil(mainWrapperRef.current.offsetWidth);
       if (scrollPosition >= scrollablePx) {
         fetchBlogs();
       }
@@ -42,9 +37,6 @@ export default function BlogPost() {
   };
 
   const scrollBlogBack = () => {
-    if (scrollPosition - 1000 == 0) {
-      setScrolled(false);
-    }
     mainWrapperRef.current.scroll(
       scrollPosition - 1000 <= 0 ? 0 : scrollPosition - 1000,
       0
@@ -59,9 +51,7 @@ export default function BlogPost() {
     setBlogs(blogData);
     setBlogLength(blogData.length);
     mainWrapperRef.current.addEventListener("scroll", (e) => {
-      if (e.target.scrollLeft > 200) {
-        setScrolled(true);
-      }
+      e.target.scrollLeft > 200 ?  setScrolled(true) :  setScrolled(false);
     });
   }, []);
 
@@ -86,26 +76,7 @@ export default function BlogPost() {
         ref={mainWrapperRef}
         className="relative flex max-w-full gap-6 p-6 px-5 overflow-x-auto lg:px-16 md:px-9 hide-scroll"
       >
-        {blogs.map((value, index) => {
-          let { date, title, description, tags } = value;
-          return (
-            <Blog
-              key={index}
-              date={date}
-              title={title}
-              description={description}
-            >
-              {tags.map((value, index) => (
-                <div
-                  key={index}
-                  className="bg-muted-50 rounded-2.3xl px-2.5 py-01"
-                >
-                  <p className="text-lg font-normal text-muted-200">{value}</p>
-                </div>
-              ))}
-            </Blog>
-          );
-        })}
+        <RanderPost blogs={blogs} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import AboutUs from "../components/sections/AboutUs";
-import BlogPost from "../components/sections/BlogPost";
+import Posts from "../components/sections/blogs/Posts";
 import Expertise from "../components/sections/Expertise";
 import Footer from "../components/sections/Footer";
 import Gallery from "../components/sections/Gallery";
@@ -28,7 +28,7 @@ export default function Home() {
         <AboutUs />
         <Gallery />
       </Layout>
-      <BlogPost />
+      <Posts />
       <Layout>
         <Footer />
       </Layout>

@@ -15,16 +15,19 @@ export default function Footer() {
             link="https://twitter.com/apeunit"
             text="Twitter"
             target="_blank"
+            style={"no-underline"}
           />
           <CustomLink
             link="https://www.facebook.com/apeunit/"
             text="Facebook"
             target="_blank"
+            style={"no-underline"}
           />
           <CustomLink
             link="https://de.linkedin.com/company/ape-unit"
             text="LinkedIn"
             target="_blank"
+            style={"no-underline"}
           />
         </div>
         <h4>

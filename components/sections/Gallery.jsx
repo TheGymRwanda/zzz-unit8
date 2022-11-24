@@ -16,9 +16,9 @@ export default function Gallery() {
         })}
       </div>
       <img src="/assets/imgs/default.webp" alt="" className="hidden def" />
-      <div className="wrapper">
+      <div className="">
         <section className="randomPage">
-          <div className="block opacity-100 randoms">
+          <div className="block opacity-100 wrapper randoms">
             <canvas
               id="randCanvas"
               width="1920"
