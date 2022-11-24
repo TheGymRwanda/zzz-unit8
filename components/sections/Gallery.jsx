@@ -1,27 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from "react";
 import { galery } from "../../utils/galery";
 import movingImg from "../../utils/moveImage";
-import grayImage from "/public/assets/imgs/default.webp";
-import Image from "next/image";
 export default function Gallery() {
   useEffect(() => {
     window.addEventListener("DOMContentLoaded", movingImg());
   }, []);
   return (
     <div className="relative h-screen">
-      <div id="randsImages">
-        {galery.map((images) => {
+      <div id="randsImages" className="">
+        {galery.map((im) => {
           return (
-            <Image
-              src={images.picture}
-              key={images.id}
-              alt="users"
-              className="img"
-            />
+            <img src={im.picture} key={im.id} alt="users" className="img" />
           );
         })}
       </div>
-      <Image src={grayImage} alt="" className="hidden gray-img" />
+      <img src="/assets/imgs/default.webp" alt="" className="hidden def" />
       <div className="wrapper">
         <section className="randomPage">
           <div className="block opacity-100 randoms">
