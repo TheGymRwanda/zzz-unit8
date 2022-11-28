@@ -73,9 +73,11 @@ module.exports = {
         35: "8.8875rem",
       },
       inset: {
-        0.3: "0.375rem",
+        0.1: "0.0625rem",
         0.2: "0.125rem",
+        0.3: "0.375rem",
         0.6: "0.625rem",
+        0.9: "1.125rem",
         layout: "calc(calc(100% - 82rem) / 2)",
       },
       maxWidth: {
