@@ -128,7 +128,8 @@ module.exports = {
         "3xl": "1px 1px 14px rgba(0, 0, 0, 0.1)",
       },
       transitionDuration: {
-        '0.4': '0.4s',
+        0.2: '0.2s',
+        0.4: '0.4s',
       }
     },
   },
