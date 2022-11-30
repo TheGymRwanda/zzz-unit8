@@ -2,21 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { projectData } from "../../utils/projectData";
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 export default function Project() {
   const [shown, setShown] = useState(0);
   const [scrolled, setScrolled] = useState(false);
 
   const scrollSticked = () => {
-    console.log(window.scrollY);
     window.scrollY > 1380 ? setScrolled(true) : setScrolled(false);
   };
   useEffect(() => {
     window.addEventListener("scroll", scrollSticked);
+    return () => {
+      window.removeEventListener("scroll", scrollSticked);
+    };
   }, [scrolled]);
 
   const shownImageOnclik = (e) => {
-    // if (shown == e.target.id) return setShown(0);
     setShown(e.target.id);
   };
   const hideImage = (e) => {
@@ -24,7 +25,7 @@ export default function Project() {
   };
   return (
     <div
-      className={`flex flex-col lg:relative xl:mb-34 lg:mb-12.1 md:mb-24.2 mb-11.8  `}
+      className={`flex flex-col lg:relative xl:mb-34 lg:mb-12.1 md:mb-24.2 mb-11.8`}
     >
       <h4 className="text-xl leading-7 text-muted-300 md:mb-5 md:text-2xl">
         Projects
@@ -65,9 +66,8 @@ export default function Project() {
               <Link href={link} target="_blank" className={`group`}>
                 <h3
                   id={id}
-                  className={`relative transition-all duration-300 mb-5 cursor-pointer text-5.43xl leading-12 tracking-tight group after:opacity-0 after:transition-all after:duration-300 after:bg-black after:w-full after:h-0.1 after:absolute after:-bottom-0.3 after:-left-10 group-hover:after:left-1.5 group-hover:after:opacity-100`}
+                  className={`relative transition-all duration-300 mb-5 cursor-pointer text-7.2xl leading-12 tracking-tight group after:opacity-0 after:transition-all after:duration-300 after:bg-black after:w-full after:h-0.1 after:absolute after:-bottom-0.3 after:-left-10 group-hover:after:left-1.5 group-hover:after:opacity-100`}
                   onMouseOver={shownImageOnclik}
-                  // onMouseOut={hideImage}
                 >
                   {title}
                   <Image

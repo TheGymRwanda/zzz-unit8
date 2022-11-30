@@ -42,9 +42,9 @@ module.exports = {
         "2.5xl": "1.25rem",
         "2.9xl": "1.75rem",
         "5.4xl": "3.25rem",
-        "5.43xl": "5.375rem",
         "5.5xl": "3.625rem",
         "6.5xl": "4rem",
+        "7.2xl": "5.375rem",
       },
       spacing: {
         2.7: "0.6875rem",
