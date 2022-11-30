@@ -42,6 +42,7 @@ module.exports = {
         "2.5xl": "1.25rem",
         "2.9xl": "1.75rem",
         "5.4xl": "3.25rem",
+        "5.43xl": "5.375rem",
         "5.5xl": "3.625rem",
         "6.5xl": "4rem",
       },
@@ -95,6 +96,7 @@ module.exports = {
       height: {
         0.1: "0.125rem",
         111: "27.3125rem",
+        120: "43.75rem",
       },
       width: {
         50: "50.375rem",
@@ -128,8 +130,8 @@ module.exports = {
         "3xl": "1px 1px 14px rgba(0, 0, 0, 0.1)",
       },
       transitionDuration: {
-        '0.4': '0.4s',
-      }
+        0.4: "0.4s",
+      },
     },
   },
   plugins: [],
