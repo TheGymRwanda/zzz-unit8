@@ -30,6 +30,24 @@ export default function movingImg() {
         }
     }
 
+    function drawGrayRect() {
+        if (!prev.dx) return ;
+        contex.beginPath();
+        contex.lineWidth = "6";
+        contex.fillStyle = "#E4E4E4";
+        contex.rect(prev.dx-3, prev.dy-2, prev.dw+5, prev.dh+5);
+        contex.fill();
+    }
+
+    function drawImageOnCanvas(img,mouseRatio,imageRatio) {
+        contex.drawImage(
+            img,
+            oldMouseX * devicePixelRatio -  (img.width * devicePixelRatio) / mouseRatio,
+            oldMouseY * devicePixelRatio -  (img.height * devicePixelRatio) / mouseRatio,
+            (img.width * devicePixelRatio) / imageRatio,
+            (img.height * devicePixelRatio) / imageRatio
+        );
+    }
     
     window.onresize = resizeWidthAndHeight();
 	
@@ -40,8 +58,8 @@ export default function movingImg() {
         alpha: 1,
         ease: Power3.easeInOut,
         onComplete: function () {
-            gravityX = windowWidth / 2;
-            gravityY = windowHeight / 2;
+            gravityX = 0;
+            gravityY =0;
 
             randoms.onmousemove = window.randomPics;
         },
@@ -57,7 +75,7 @@ export default function movingImg() {
     let oldMouseY = -1000;
 
     window.randomPics = function (e) {
-        // let rect = container.getBoundingClientRect();
+        // let rect = canvas.getBoundingClientRect();
         let dist = getDistance(oldMouseX, e.clientX, oldMouseY, e.clientY);
         if (dist > 20) {
             oldMouseX = e.clientX;
@@ -69,113 +87,40 @@ export default function movingImg() {
             if (img.width && img.height) {
                 if (windowWidth > 600) {
                     if (devicePixelRatio) {
-                        if (prev.imgs !== "") {
-                            contex.drawImage(
-                                def,
-                                prev.dx,
-                                prev.dy,
-                                prev.dw,
-                                prev.dh
-                            );
-                        }
-                        contex.drawImage(
-                            img,
-                            oldMouseX * devicePixelRatio -
-                                (img.width * devicePixelRatio) / 4,
-                            oldMouseY * devicePixelRatio -
-                                (img.height * devicePixelRatio) / 4,
-                            (img.width * devicePixelRatio) / 2,
-                            (img.height * devicePixelRatio) / 2
-                        );
-                        prev.imgs = img;
-                        prev.dx =
-                            oldMouseX * devicePixelRatio -
-                            (img.width * devicePixelRatio) / 4;
-                        prev.dy =
-                            oldMouseY * devicePixelRatio -
-                            (img.height * devicePixelRatio) / 4;
+                        // refact
+                        drawGrayRect();
+                        drawImageOnCanvas(img,4,2)                       
+                        prev.dx = oldMouseX * devicePixelRatio -  (img.width * devicePixelRatio) / 4;
+                        prev.dy = oldMouseY * devicePixelRatio -  (img.height * devicePixelRatio) / 4;
                         prev.dh = (img.height * devicePixelRatio) / 2;
                         prev.dw = (img.width * devicePixelRatio) / 2;
                     } else {
-                        if (prev.imgs !== "") {
-                            contex.drawImage(
-                                def,
-                                prev.dx,
-                                prev.dy,
-                                prev.dw,
-                                prev.dh
-                            );
-                        }
-                        contex.drawImage(
-                            img,
-                            oldMouseX - img.width / 2,
-                            oldMouseY - img.height / 2,
-                            img.width,
-                            img.height
-                        );
-                        prev.imgs = img;
-                        prev.dx =
-                            oldMouseX * devicePixelRatio -
-                            (img.width * devicePixelRatio) / 2;
-                        prev.dy =
-                            oldMouseY * devicePixelRatio -
-                            (img.height * devicePixelRatio) / 2;
+                        // refact
+                        drawGrayRect();
+                        drawImageOnCanvas(img,2,1);                      
+                        prev.dx = oldMouseX * devicePixelRatio -  (img.width * devicePixelRatio) / 2;
+                        prev.dy = oldMouseY * devicePixelRatio -  (img.height * devicePixelRatio) / 2;
                         prev.dh = img.height;
                         prev.dw = img.width;
                     }
                 } else {
+                    console
                     if (devicePixelRatio) {
-                        if (prev.imgs !== "") {
-                            contex.drawImage(
-                                def,
-                                prev.dx,
-                                prev.dy,
-                                prev.dw,
-                                prev.dh
-                            );
-                        }
-                        contex.drawImage(
-                            img,
-                            oldMouseX * devicePixelRatio - img.width / 4,
-                            oldMouseY * devicePixelRatio - img.height / 4,
-                            img.width / 2,
-                            img.height / 2
-                        );
-                        prev.imgs = img;
-                        prev.dx =
-                            oldMouseX * devicePixelRatio -
-                            (img.width * devicePixelRatio) / 4;
-                        prev.dy =
-                            oldMouseY * devicePixelRatio -
-                            (img.height * devicePixelRatio) / 4;
+                        // refact
+                        drawGrayRect();
+                        drawImageOnCanvas(img,4,2);
+                        prev.dx = oldMouseX * devicePixelRatio - (img.width * devicePixelRatio) / 4;
+                        prev.dy = oldMouseY * devicePixelRatio - (img.height * devicePixelRatio) / 4;
                         prev.dh = (img.height * devicePixelRatio) / 2;
                         prev.dw = (img.width * devicePixelRatio) / 2;
 
                         document.querySelector(".dummy").style.display = "none";
                     } else {
-                        if (prev.imgs !== "") {
-                            contex.drawImage(
-                                def,
-                                prev.dx,
-                                prev.dy,
-                                prev.dw,
-                                prev.dh
-                            );
-                        }
-                        contex.drawImage(
-                            img,
-                            oldMouseX - img.width / 4,
-                            oldMouseY - img.height / 4,
-                            img.width / 2,
-                            img.height / 2
-                        );
-                        prev.imgs = img;
-                        prev.dx =
-                            oldMouseX * devicePixelRatio -
-                            (img.width * devicePixelRatio) / 4;
-                        prev.dy =
-                            oldMouseY * devicePixelRatio -
-                            (img.height * devicePixelRatio) / 4;
+                        // refact
+                        drawGrayRect();
+                        drawImageOnCanvas(img,4,2);
+                        prev.dx =  oldMouseX * devicePixelRatio - (img.width * devicePixelRatio) / 4;
+                        prev.dy = oldMouseY * devicePixelRatio - (img.height * devicePixelRatio) / 4;
                         prev.dh = (img.height * devicePixelRatio) / 2;
                         prev.dw = (img.width * devicePixelRatio) / 2;
                     }
