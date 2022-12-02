@@ -24,7 +24,9 @@ module.exports = {
         },
       },
       lineHeight: {
+        4.2: "1.125rem",
         8.3: "2.125rem",
+        10.2: "2.625rem",
         11: "4rem",
         12: "4.5rem",
         tighter: "1.125",
@@ -108,9 +110,10 @@ module.exports = {
         xs: "25rem",
       },
       margin: {
+        9.2: "2.375rem",
         11.1: "3rem",
         11.2: "4.8125rem",
-        33: "8.25rem",
+        33: "8.25rem",        
       },
       padding: {
         0.1: "0.1875rem",
