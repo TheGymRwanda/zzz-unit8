@@ -46,6 +46,7 @@ module.exports = {
         "5.4xl": "3.25rem",
         "5.5xl": "3.625rem",
         "6.5xl": "4rem",
+        "7.2xl": "5.375rem",
       },
       spacing: {
         2.7: "0.6875rem",
@@ -99,6 +100,7 @@ module.exports = {
       height: {
         0.1: "0.125rem",
         111: "27.3125rem",
+        120: "43.75rem",
       },
       width: {
         50: "50.375rem",
@@ -129,12 +131,12 @@ module.exports = {
       borderWidth: {
         1.5: "0.0938rem",
       },
-      textDecorationThickness:{
-        1.5: "0.0938rem"
+      textDecorationThickness: {
+        1.5: "0.0938rem",
       },
       dropShadow: {
         "3xl": "1px 1px 14px rgba(0, 0, 0, 0.1)",
-      }
+      },
     },
   },
   plugins: [],
