@@ -1,8 +1,7 @@
-import { Tab, Transition } from "@headlessui/react";
-import { useState, useRef, useEffect } from "react";
+import { Tab } from "@headlessui/react";
+import {useRef, useEffect } from "react";
 import classNames from "../../utils/classNames";
 import CustomLink from "../ui/CustomLink";
-import UpArrow from "../vectors/UpArrow";
 import AboutUsMobile from "./AboutUsMobile";
 import { data } from "/utils/aboutUsData";
 
