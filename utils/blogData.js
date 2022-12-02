@@ -8,7 +8,7 @@ const blogData = [
             deploy an open protocol for decentralized working 
             capital and MSME financial solutions across Africa.        
         `,
-        tags:["Blockchain","DAOs","Decentralization"]
+        tags:["Blockchain","DAOs","Decentralization","Blockchain","DAOs","Decentralization"]
     },
     {
         id: 2,

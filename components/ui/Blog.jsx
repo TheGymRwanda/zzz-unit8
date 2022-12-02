@@ -9,7 +9,7 @@ function Blog({ date, title, description, children }) {
                 <p className="flex-grow pb-2 overflow-hidden text-xl font-normal leading-7 md:leading-8 -tracking-xsm max-h-41 text-ellipsis md:text-2xl md:-tracking-lg">
                     {description}
                 </p>
-                <div className="flex flex-wrap gap-x-3 gap-y-2">{children}</div>
+                <div className="flex flex-wrap gap-x-3 gap-y-2 mt-9.2">{children}</div>
             </div>
         </div>
     );

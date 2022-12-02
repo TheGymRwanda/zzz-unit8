@@ -110,9 +110,10 @@ module.exports = {
         xs: "25rem",
       },
       margin: {
+        9.2: "2.375rem",
         11.1: "3rem",
         11.2: "4.8125rem",
-        33: "8.25rem",
+        33: "8.25rem",        
       },
       padding: {
         0.1: "0.1875rem",
