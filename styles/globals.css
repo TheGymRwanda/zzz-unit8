@@ -1,0 +1,45 @@
+/* tailwind config */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Grotesk";
+  src: url("https://res.cloudinary.com/dl1vj7yr9/raw/upload/v1669212658/Fonts/NeufileGrotesk-Regular_eh1sma.otf");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@layer components {
+  body {
+    @apply overflow-x-hidden font-grotesk;
+  }
+}
+
+::selection {
+  @apply text-white bg-primary-300;
+}
+
+/* hide the scoll but keep the scroll functioning */
+.hide-scroll {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+.hide-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+#randsImages {
+  display: none;
+}
+
+.randoms canvas {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

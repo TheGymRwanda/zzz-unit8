@@ -1,0 +1,30 @@
+export default function UpArrow({color= ffalse}) {
+    return (
+        <svg
+            width="16"
+            height="17"
+            viewBox="0 0 16 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={`duration-300 ${
+                color
+                    ? "rotate-180 text-primary-300"
+                    : "rotate-0"
+            }`}
+        >
+            <path
+                d="M13.9365 9.21997L7.4518 15.7047L0.967072 9.21997"
+                stroke="currentColor"
+                strokeWidth="1.5"
+            />
+            <line
+                x1="7.44336"
+                y1="15.7045"
+                x2="7.44336"
+                y2="0.141126"
+                stroke="currentColor"
+                strokeWidth="1.5"
+            />
+        </svg>
+    );
+}
