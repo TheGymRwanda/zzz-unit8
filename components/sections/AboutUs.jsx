@@ -40,7 +40,7 @@ export default function AboutUs() {
                         onChange={(index) => animateTabs(index)}
                     >
                         <Tab.List
-                            className={`flex h-8 gap-10.75 text-muted-300 -tracking-lg relative about-us__tabs  `}
+                            className={`flex h-8 gap-10.75 text-muted-300 -tracking-lg relative tab-list`}
                             ref={tabs}
                         >
                             {data.map((el, index) => (

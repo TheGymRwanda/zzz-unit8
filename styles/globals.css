@@ -15,11 +15,11 @@
         @apply overflow-x-hidden font-grotesk;
     }
     
-    .about-us__tabs{
+    .tab-list{
         --lineWidth: 0; 
         --linePosition: 0;
     }
-    .about-us__tabs::after{
+    .tab-list::after{
         @apply bg-primary-300 h-0.1 ease-linear duration-150 absolute bottom-0 ;
         content: '';
         width: calc(var(--lineWidth) * 1px);
