@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import Layout from "../../layout/Layout";
 import blogData from "/utils/blogData";
 import RightArrow from "../../vectors/Arrow";
-import RenderPost from "./RenderPosts";
+import RenderPost from "./RenderPost";
+
 import { scrollBlogForward , scrollBlogBack } from "/utils/scrollBlog";
 
 export default function Posts() {
