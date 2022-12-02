@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        grotesk: ["Grotesk", "sans-serif"],
+        grotesk: ["Neufile Grotesk", "sans-serif"],
       },
       colors: {
         primary: {
