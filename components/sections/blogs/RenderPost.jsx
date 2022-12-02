@@ -1,6 +1,6 @@
 import Blog from "../../ui/Blog";
 
-export default function RanderPost({ blogs }) {
+export default function RenderPost({ blogs }) {
     return(
         <>
             {blogs.map((value, index) => {

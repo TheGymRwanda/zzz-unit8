@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Layout from "../../layout/Layout";
 import blogData from "/utils/blogData";
 import RightArrow from "../../vectors/Arrow";
-import RanderPost from "./RanderPosts";
+import RenderPost from "./RenderPosts";
 import { scrollBlogForward , scrollBlogBack } from "/utils/scrollBlog";
 
 export default function Posts() {
@@ -73,7 +73,7 @@ export default function Posts() {
         ref={mainWrapperRef}
         className={`relative flex max-w-full gap-6 p-6 px-5 overflow-x-auto  hide-scroll`}
       >
-        <RanderPost blogs={blogs} />
+        <RenderPost blogs={blogs} />
       </div>
     </section>
   );
